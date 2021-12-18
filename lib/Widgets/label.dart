@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Label extends StatelessWidget {
   const Label({Key? key, required this.label}) : super(key: key);
@@ -11,7 +12,7 @@ class Label extends StatelessWidget {
         Text(
           label,
           // textAlign: TextAlign.left,
-          style: const TextStyle(fontSize: 18),
+          style: GoogleFonts.balsamiqSans(fontSize: 20),
         ),
       ],
     );

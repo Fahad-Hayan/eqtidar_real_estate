@@ -7,6 +7,7 @@ import 'package:eqtidar_app/Screens/main_screen.dart';
 import 'package:eqtidar_app/Widgets/floating_action_button.dart';
 import 'package:eqtidar_app/Widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyLoginPage extends StatefulWidget {
   const MyLoginPage({Key? key}) : super(key: key);
@@ -21,6 +22,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MyAppBar(title: 'Account'),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.max,
@@ -68,22 +70,26 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         debugPrint(
                             'passwordTextController.text: ${passwordTextController.text}');
                       },
-                      child: const Text(
-                        'Login',
-                        style: TextStyle(
-                            color: Colors.black45,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold),
-                      ),
+                      child: Text('Login',
+                          style: GoogleFonts.balsamiqSans(
+                              color: Colors.black45,
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold)
+                          // TextStyle(
+                          //     color: Colors.black45,
+                          //     fontSize: 16,
+                          //     fontWeight: FontWeight.bold),
+                          ),
                     ),
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
-                        'Don\'t have an account?',
-                        style: TextStyle(color: Colors.black45, fontSize: 16.0),
-                      ),
+                      Text('Don\'t have an account?',
+                          style: GoogleFonts.balsamiqSans(
+                              fontSize: 16, color: Colors.black45)
+                          // TextStyle(color: Colors.black45, fontSize: 16.0),
+                          ),
                       TextButton(
                         onPressed: () {
                           Navigator.of(context)
@@ -93,12 +99,18 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         },
                         child: Text(
                           'Sign Up',
-                          style: TextStyle(
+                          style: GoogleFonts.balsamiqSans(
                             fontSize: 16,
-                            decoration: TextDecoration.underline,
                             color: Theme.of(context).primaryColor,
                             fontWeight: FontWeight.bold,
+                            decoration: TextDecoration.underline,
                           ),
+                          // TextStyle(
+                          //   fontSize: 16,
+                          //   decoration: TextDecoration.underline,
+                          //   color: Theme.of(context).primaryColor,
+                          //   fontWeight: FontWeight.bold,
+                          // ),
                         ),
                       ),
                     ],

@@ -1,3 +1,4 @@
+import 'package:eqtidar_app/Screens/details_page.dart';
 import 'package:flutter/material.dart';
 
 class ImagesBuilder extends StatelessWidget {
@@ -6,7 +7,7 @@ class ImagesBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
+      padding: const EdgeInsets.symmetric(vertical: 2),
       child: SizedBox(
         height: 170.0,
         child: ListView.builder(
@@ -14,28 +15,22 @@ class ImagesBuilder extends StatelessWidget {
             // shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             itemCount: list.length,
-            itemBuilder: (BuildContext context, int index) => Padding(
-                  padding: const EdgeInsets.only(
-                    left: 20,
-                  ),
-                  child: InkWell(
-                    splashColor: Theme.of(context).primaryColor.withOpacity(.5),
-                    customBorder: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
+            itemBuilder: (BuildContext context, int index) => Row(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    const SizedBox(
+                      width: 10,
                     ),
-                    onTap: () {
-                      // Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-                      //   return page;
-                      // }));
-                    },
-                    child: Card(
-                      elevation: 3,
+                    Card(
+                      elevation: 2,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: list[index],
                     ),
-                  ),
+                    const SizedBox(),
+                  ],
                 )),
       ),
     );

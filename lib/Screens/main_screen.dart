@@ -1,9 +1,9 @@
 import 'package:eqtidar_app/Screens/categories_page.dart';
-import 'package:eqtidar_app/Screens/search_page.dart';
 import 'package:eqtidar_app/Screens/home_page.dart';
 import 'package:eqtidar_app/Screens/login_page.dart';
-import 'package:eqtidar_app/Widgets/app_bar.dart';
+import 'package:eqtidar_app/Screens/saved_page.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyMainScreen extends StatefulWidget {
   const MyMainScreen({Key? key}) : super(key: key);
@@ -14,8 +14,6 @@ class MyMainScreen extends StatefulWidget {
 
 class _MyMainScreenState extends State<MyMainScreen> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   final List<Widget> _widgetOptions = <Widget>[
     const MyHomePage(),
     const MyCategoriesPage(),
@@ -47,9 +45,9 @@ class _MyMainScreenState extends State<MyMainScreen> {
             label: 'Categories',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star_border),
-            activeIcon: Icon(Icons.star),
-            label: 'Wishes',
+            icon: Icon(Icons.bookmark_outline),
+            activeIcon: Icon(Icons.bookmark),
+            label: 'Saved',
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -64,11 +62,16 @@ class _MyMainScreenState extends State<MyMainScreen> {
         selectedItemColor: Theme.of(context).primaryColor,
         unselectedItemColor: Colors.black45,
         // backgroundColor: Theme.of(context).canvasColor,
-        backgroundColor: Colors.transparent,
+        // backgroundColor: Colors.transparent,
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
         onTap: _onItemTapped,
         elevation: 0,
+        selectedLabelStyle:
+            GoogleFonts.balsamiqSans(fontSize: 16, fontWeight: FontWeight.bold),
+        unselectedLabelStyle: GoogleFonts.balsamiqSans(
+          fontSize: 14,
+        ),
       ),
     );
   }

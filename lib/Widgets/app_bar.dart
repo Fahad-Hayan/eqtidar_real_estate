@@ -1,47 +1,60 @@
 import 'package:eqtidar_app/Widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MyAppBar({Key? key}) : super(key: key);
+  const MyAppBar({required this.title, Key? key}) : super(key: key);
+  final String title;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: AppBar(
+        // title: const Text(
+        //   'Eqtidar',
+        //   style: TextStyle(color: Colors.black45),
+        // ),
 
-          // title: const Text(
-          //   'Eqtidar',
-          //   style: TextStyle(color: Colors.black45),
-          // ),
-          flexibleSpace: const FlexibleSpaceBar(
-            collapseMode: CollapseMode.parallax,
-            stretchModes: <StretchMode>[StretchMode.fadeTitle],
-          ),
-          toolbarHeight: 70,
-          title: Column(
-            children: const [
-              SizedBox(
-                height: 10,
-              ),
-              StandardTextField(
-                hintText: 'Search for a location',
+        // leading: title == 'Register' || title == 'Details'
+        //     ? IconButton(
+        //         onPressed: () {
+        //           Navigator.of(context).pop();
+        //         },
+        //         icon: const Icon(Icons.arrow_back))
+        //     : const SizedBox(),
+        centerTitle: true,
+        foregroundColor: Colors.black45,
+        toolbarHeight: 70,
+        title: title == 'null'
+            ? const StandardTextField(
+                hintText: 'Search for a home',
                 icon: Icon(Icons.search),
+              )
+            : Text(
+                title,
+                style: GoogleFonts.balsamiqSans(fontWeight: FontWeight.bold),
               ),
-              SizedBox(
-                height: 4,
-              ),
-            ],
-          ),
-          actions: [
+        actions: [
+          if (title == 'null')
             IconButton(
                 onPressed: () {},
                 icon: const Icon(
                   Icons.filter_list,
                   color: Colors.black45,
                   size: 35,
-                )),
-          ],
-          elevation: 0,
-          backgroundColor: Theme.of(context).canvasColor),
+                ))
+          else if (title == 'Details')
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.bookmark_border,
+                  size: 34,
+                ))
+          else
+            const SizedBox()
+        ],
+        elevation: 0,
+        backgroundColor: Theme.of(context).canvasColor,
+      ),
     );
   }
 

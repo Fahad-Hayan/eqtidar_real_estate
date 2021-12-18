@@ -1,5 +1,6 @@
 import 'package:eqtidar_app/Screens/Categories/apartments_complex.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StandardCategory extends StatelessWidget {
   const StandardCategory(
@@ -43,7 +44,10 @@ class StandardCategory extends StatelessWidget {
                   Expanded(
                     child: Text(
                       title,
-                      textAlign: TextAlign.justify,
+                      // textAlign: TextAlign.justify,
+                      style: GoogleFonts.balsamiqSans(
+                        fontSize: 18,
+                      ),
                     ),
                   ),
                 ],

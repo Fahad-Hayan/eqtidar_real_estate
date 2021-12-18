@@ -1,3 +1,4 @@
+import 'package:eqtidar_app/Widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
 class SpecialOffers extends StatelessWidget {
@@ -6,9 +7,6 @@ class SpecialOffers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Special Offers'),
-        ),
-        body: const Center(child: Text('Apartment')));
+        appBar: const MyAppBar(title: 'Special Offers'), body: Container());
   }
 }

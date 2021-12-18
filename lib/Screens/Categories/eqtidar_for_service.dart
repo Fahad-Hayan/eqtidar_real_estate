@@ -1,14 +1,13 @@
+import 'package:eqtidar_app/Widgets/app_bar.dart';
 import 'package:flutter/material.dart';
 
-class EqtiidarForService extends StatelessWidget {
-  const EqtiidarForService({Key? key}) : super(key: key);
+class EqtiidarForConsulting extends StatelessWidget {
+  const EqtiidarForConsulting({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Eqtidar For Service'),
-        ),
-        body: const Center(child: Text('Apartment')));
+        appBar: const MyAppBar(title: 'Eqtiidar For Consulting'),
+        body: Container());
   }
 }

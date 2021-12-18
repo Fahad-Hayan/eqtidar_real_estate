@@ -1,6 +1,8 @@
+import 'package:eqtidar_app/Widgets/app_bar.dart';
 import 'package:eqtidar_app/Widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MySignUpScreen extends StatefulWidget {
   const MySignUpScreen({Key? key}) : super(key: key);
@@ -15,104 +17,65 @@ class _MySignUpScreenState extends State<MySignUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var headerImage = SvgPicture.asset('images/undraw_Notify_re_65on.svg',
-        height: 200, semanticsLabel: 'Acme Logo');
-
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Eqtidar'),
+      appBar: const MyAppBar(
+        title: 'Register',
       ),
-      body: Stack(children: [
-        Positioned(
-          top: 0,
-          child: SizedBox(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.4,
-            child: Image.network(
-              'https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=996&q=80',
-              fit: BoxFit.cover,
-            ),
-          ),
-        ),
-        Positioned(
-          bottom: 0,
-          child: Container(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height * 0.7,
-            decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.5),
-                  spreadRadius: 5,
-                  blurRadius: 7,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-              color: Colors.amberAccent[100],
-              borderRadius: const BorderRadius.only(
-                topLeft: Radius.circular(20),
-                topRight: Radius.circular(20),
-              ),
-              shape: BoxShape.rectangle,
-            ),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        // mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
             child: Column(
-              mainAxisSize: MainAxisSize.max,
               children: [
+                const FlutterLogo(
+                  size: 150,
+                  textColor: Color.fromRGBO(179, 174, 34, 1),
+                  style: FlutterLogoStyle.stacked,
+                ),
+                const StandardTextField(
+                    hintText: 'Full Name', icon: Icon(Icons.person)),
+                const StandardTextField(
+                  hintText: 'Mobile Number',
+                  icon: Icon(Icons.phone),
+                ),
+                const StandardTextField(
+                  hintText: 'Password',
+                  icon: Icon(Icons.password),
+                ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 40),
-                    child: Column(
-                      children: [
-                        const StandardTextField(
-                          hintText: 'Mobile number',
-                          icon: Icon(Icons.phone),
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          Theme.of(context).primaryColor),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
                         ),
-                        const StandardTextField(
-                          hintText: 'Password',
-                          icon: Icon(Icons.password),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(top: 8.0),
-                          child: ElevatedButton(
-                            style: ButtonStyle(
-                              shape: MaterialStateProperty.all<
-                                  RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(18.0),
-                                ),
-                              ),
-                            ),
-                            onPressed: () {},
-                            child: const Text('Login'),
-                          ),
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text('or you can'),
-                            TextButton(
-                              onPressed: () {
-                                Navigator.of(context)
-                                    .push(MaterialPageRoute(builder: (_) {
-                                  return const MySignUpScreen();
-                                }));
-                              },
-                              child: const Text(
-                                'Register',
-                              ),
-                            ),
-                          ],
-                        )
-                      ],
+                      ),
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'Sign Up',
+                      style: GoogleFonts.balsamiqSans(
+                        fontSize: 16,
+                        color: Colors.black45,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      // TextStyle(
+                      //     color: Colors.black45,
+                      //     fontSize: 16,
+                      //     fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
               ],
             ),
           ),
-        ),
-      ]),
+        ],
+      ),
       // ListView(
       //   children: [
       //     const Padding(
