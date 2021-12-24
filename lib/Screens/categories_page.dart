@@ -45,7 +45,7 @@ class MyCategoriesPage extends StatelessWidget {
                     size: 50,
                     color: Theme.of(context).primaryColor,
                   ),
-                  page: const ApartmentsComplex(),
+                  page: ApartmentsComplex(),
                 ),
                 StandardCategory(
                   title: 'SAIL OFFERS',
