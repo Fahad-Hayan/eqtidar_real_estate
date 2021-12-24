@@ -21,60 +21,65 @@ class _MySignUpScreenState extends State<MySignUpScreen> {
       appBar: const MyAppBar(
         title: 'Register',
       ),
-      body: Column(
-        mainAxisSize: MainAxisSize.max,
-        // mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
-            child: Column(
-              children: [
-                const FlutterLogo(
-                  size: 150,
-                  textColor: Color.fromRGBO(179, 174, 34, 1),
-                  style: FlutterLogoStyle.stacked,
-                ),
-                const StandardTextField(
-                    hintText: 'Full Name', icon: Icon(Icons.person)),
-                const StandardTextField(
-                  hintText: 'Mobile Number',
-                  icon: Icon(Icons.phone),
-                ),
-                const StandardTextField(
-                  hintText: 'Password',
-                  icon: Icon(Icons.password),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 8.0),
-                  child: ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(
-                          Theme.of(context).primaryColor),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
+                child: Column(
+                  children: [
+                    const FlutterLogo(
+                      size: 150,
+                      textColor: Color.fromRGBO(0, 200, 255, 1),
+                      style: FlutterLogoStyle.stacked,
+                    ),
+                    const StandardTextField(
+                        hintText: 'Full Name', icon: Icon(Icons.person)),
+                    const StandardTextField(
+                      hintText: 'Mobile Number',
+                      icon: Icon(Icons.phone),
+                    ),
+                    const StandardTextField(
+                      hintText: 'Password',
+                      icon: Icon(Icons.password),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0),
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              Theme.of(context).primaryColor),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                            ),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'Sign Up',
+                          style: GoogleFonts.balsamiqSans(
+                            fontSize: 16,
+                            color: Colors.black45,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          // TextStyle(
+                          //     color: Colors.black45,
+                          //     fontSize: 16,
+                          //     fontWeight: FontWeight.bold),
                         ),
                       ),
                     ),
-                    onPressed: () {},
-                    child: Text(
-                      'Sign Up',
-                      style: GoogleFonts.balsamiqSans(
-                        fontSize: 16,
-                        color: Colors.black45,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      // TextStyle(
-                      //     color: Colors.black45,
-                      //     fontSize: 16,
-                      //     fontWeight: FontWeight.bold),
-                    ),
-                  ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
       // ListView(
       //   children: [

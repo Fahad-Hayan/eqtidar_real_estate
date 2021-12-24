@@ -6,6 +6,9 @@ class MySearchPage extends StatelessWidget {
   // TextEditingController textController;
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: const MyAppBar(title: 'Saved'), body: Container());
+    return Scaffold(
+      appBar: const MyAppBar(title: 'Saved'),
+      body: Container(),
+    );
   }
 }

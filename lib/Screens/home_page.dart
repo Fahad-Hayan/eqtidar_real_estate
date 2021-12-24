@@ -1,9 +1,11 @@
+import 'package:eqtidar_app/Models/api/api_model.dart';
 import 'package:eqtidar_app/Screens/Categories/apartments_complex.dart';
 import 'package:eqtidar_app/Screens/Categories/buy_rent_houses.dart';
 import 'package:eqtidar_app/Screens/Categories/eqtidar_for_service.dart';
 import 'package:eqtidar_app/Screens/Categories/pieces_of_land.dart';
 import 'package:eqtidar_app/Screens/Categories/sail_offer.dart';
 import 'package:eqtidar_app/Screens/Categories/special_offers.dart';
+import 'package:eqtidar_app/Screens/splash_screen.dart';
 import 'package:eqtidar_app/Widgets/app_bar.dart';
 import 'package:eqtidar_app/Widgets/standard_image_style.dart';
 import 'package:eqtidar_app/Widgets/images_builder.dart';
@@ -160,6 +162,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ImagesBuilder(list: headline3),
             const SizedBox(height: 28),
+            FutureBuilder<List<MyModel>>(
+                future: futureData,
+                builder: (BuildContext ctx, snapshot) {
+                  if (snapshot.hasData) {
+                    return Text('${snapshot.data![1].title}');
+                  } else if (snapshot.hasError) {
+                    return Text('${snapshot.error}');
+                  }
+                  return const CircularProgressIndicator();
+                })
           ],
         ),
       ),

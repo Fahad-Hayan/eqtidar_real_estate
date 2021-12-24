@@ -24,101 +24,103 @@ class _MyLoginPageState extends State<MyLoginPage> {
     return Scaffold(
       appBar: const MyAppBar(title: 'Account'),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
-              child: Column(
-                children: [
-                  const FlutterLogo(
-                    size: 150,
-                    textColor: Color.fromRGBO(179, 174, 34, 1),
-                    style: FlutterLogoStyle.stacked,
-                  ),
-                  const SizedBox(
-                    height: 18,
-                  ),
-                  const StandardTextField(
-                    hintText: 'Mobile number',
-                    icon: Icon(Icons.phone),
-                  ),
-                  const StandardTextField(
-                    hintText: 'Password',
-                    icon: Icon(Icons.password),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(
-                            Theme.of(context).primaryColor),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                          ),
-                        ),
-                      ),
-                      onPressed: () {
-                        if (emailTextController.text.isEmpty) {
-                          debugPrint('emailTextController.text is empty...');
-                        }
-                        debugPrint(
-                            'emailTextController.text: ${emailTextController.text}');
-                        debugPrint(
-                            'passwordTextController.text: ${passwordTextController.text}');
-                      },
-                      child: Text('Login',
-                          style: GoogleFonts.balsamiqSans(
-                              color: Colors.black45,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold)
-                          // TextStyle(
-                          //     color: Colors.black45,
-                          //     fontSize: 16,
-                          //     fontWeight: FontWeight.bold),
-                          ),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
+                child: Column(
+                  children: [
+                    const FlutterLogo(
+                      size: 150,
+                      textColor: Color.fromRGBO(0, 200, 255, 1),
+                      style: FlutterLogoStyle.stacked,
                     ),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text('Don\'t have an account?',
-                          style: GoogleFonts.balsamiqSans(
-                              fontSize: 16, color: Colors.black45)
-                          // TextStyle(color: Colors.black45, fontSize: 16.0),
+                    const SizedBox(
+                      height: 18,
+                    ),
+                    const StandardTextField(
+                      hintText: 'Mobile number',
+                      icon: Icon(Icons.phone),
+                    ),
+                    const StandardTextField(
+                      hintText: 'Password',
+                      icon: Icon(Icons.password),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+                      child: ElevatedButton(
+                        style: ButtonStyle(
+                          backgroundColor: MaterialStateProperty.all(
+                              Theme.of(context).primaryColor),
+                          shape:
+                              MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(18.0),
+                            ),
                           ),
-                      TextButton(
-                        onPressed: () {
-                          Navigator.of(context)
-                              .push(MaterialPageRoute(builder: (_) {
-                            return const MySignUpScreen();
-                          }));
-                        },
-                        child: Text(
-                          'Sign Up',
-                          style: GoogleFonts.balsamiqSans(
-                            fontSize: 16,
-                            color: Theme.of(context).primaryColor,
-                            fontWeight: FontWeight.bold,
-                            decoration: TextDecoration.underline,
-                          ),
-                          // TextStyle(
-                          //   fontSize: 16,
-                          //   decoration: TextDecoration.underline,
-                          //   color: Theme.of(context).primaryColor,
-                          //   fontWeight: FontWeight.bold,
-                          // ),
                         ),
+                        onPressed: () {
+                          if (emailTextController.text.isEmpty) {
+                            debugPrint('emailTextController.text is empty...');
+                          }
+                          debugPrint(
+                              'emailTextController.text: ${emailTextController.text}');
+                          debugPrint(
+                              'passwordTextController.text: ${passwordTextController.text}');
+                        },
+                        child: Text('Login',
+                            style: GoogleFonts.balsamiqSans(
+                                color: Colors.black45,
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold)
+                            // TextStyle(
+                            //     color: Colors.black45,
+                            //     fontSize: 16,
+                            //     fontWeight: FontWeight.bold),
+                            ),
                       ),
-                    ],
-                  )
-                ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text('Don\'t have an account?',
+                            style: GoogleFonts.balsamiqSans(
+                                fontSize: 16, color: Colors.black45)
+                            // TextStyle(color: Colors.black45, fontSize: 16.0),
+                            ),
+                        TextButton(
+                          onPressed: () {
+                            Navigator.of(context)
+                                .push(MaterialPageRoute(builder: (_) {
+                              return const MySignUpScreen();
+                            }));
+                          },
+                          child: Text(
+                            'Sign Up',
+                            style: GoogleFonts.balsamiqSans(
+                              fontSize: 16,
+                              color: Theme.of(context).primaryColor,
+                              fontWeight: FontWeight.bold,
+                              decoration: TextDecoration.underline,
+                            ),
+                            // TextStyle(
+                            //   fontSize: 16,
+                            //   decoration: TextDecoration.underline,
+                            //   color: Theme.of(context).primaryColor,
+                            //   fontWeight: FontWeight.bold,
+                            // ),
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       // ListView(

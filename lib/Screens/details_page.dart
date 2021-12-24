@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:eqtidar_app/Widgets/app_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 List imgList = const [
@@ -169,7 +170,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                   child: Card(
-                    color: Colors.black12,
+                    color: Colors.white,
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -185,27 +186,38 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                               fontWeight: FontWeight.bold,
                               color: Colors.black54),
                         ),
-                        detailsContent(
-                          count1: 10,
-                          count2: 300,
-                          count3: 2,
-                          text1: 'Room',
-                          text2: 'Area',
-                          text3: 'Bathroom',
-                          icon1: standardIcon(iconName: 'Room'),
-                          icon2: standardIcon(iconName: 'Area'),
-                          icon3: standardIcon(iconName: 'Bathroom'),
-                        ),
-                        detailsContent(
-                          count1: 1,
-                          count2: 2,
-                          count3: 2,
-                          text1: 'Garage',
-                          text2: 'Floor',
-                          text3: 'Bedroom',
-                          icon1: standardIcon(iconName: 'Garage'),
-                          icon2: standardIcon(iconName: 'Floor'),
-                          icon3: standardIcon(iconName: 'Bedroom'),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            children: [
+                              Column(
+                                children: [
+                                  detailsContent(
+                                    count1: 10,
+                                    count2: 300,
+                                    count3: 2,
+                                    text1: 'Room',
+                                    text2: 'Area',
+                                    text3: 'Bathroom',
+                                    icon1: standardIcon(iconName: 'Room'),
+                                    icon2: standardIcon(iconName: 'Area'),
+                                    icon3: standardIcon(iconName: 'Bathroom'),
+                                  ),
+                                  detailsContent(
+                                    count1: 1,
+                                    count2: 2,
+                                    count3: 2,
+                                    text1: 'Garage',
+                                    text2: 'Floor',
+                                    text3: 'Bedroom',
+                                    icon1: standardIcon(iconName: 'Garage'),
+                                    icon2: standardIcon(iconName: 'Floor'),
+                                    icon3: standardIcon(iconName: 'Bedroom'),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
                         ),
                       ]),
                     ),
@@ -215,7 +227,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                   child: Card(
-                    color: Colors.black12,
+                    color: Colors.white,
                     elevation: 0,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
@@ -224,7 +236,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                       width: double.infinity,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(
-                            vertical: 12, horizontal: 12),
+                            vertical: 12, horizontal: 22),
                         child: Column(children: [
                           Text(
                             'Description',
@@ -232,13 +244,18 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black54),
-                            textAlign: TextAlign.justify,
                           ),
-                          Text(widget.description,
-                              style: GoogleFonts.balsamiqSans(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black45))
+                          const SizedBox(
+                            height: 12,
+                          ),
+                          Text(
+                            widget.description,
+                            style: GoogleFonts.balsamiqSans(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black45),
+                            textAlign: TextAlign.justify,
+                          )
                           // detailsContent(
                           //   count1: 10,
                           //   count2: 300,
@@ -266,6 +283,72 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                     ),
                   ),
                 ),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                  child: Card(
+                    color: Colors.white,
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                    child: SizedBox(
+                      // width: double.infinity,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 12, horizontal: 12),
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Contact',
+                                style: GoogleFonts.balsamiqSans(
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black54),
+                              ),
+                              const SizedBox(
+                                height: 12,
+                              ),
+                              SingleChildScrollView(
+                                scrollDirection: Axis.horizontal,
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    contact(
+                                      context: context,
+                                      info: '07731302963',
+                                      icon: Icon(
+                                        Icons.phone,
+                                        color: Theme.of(context)
+                                            .primaryColor
+                                            .withOpacity(.6),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      height: 6,
+                                    ),
+                                    contact(
+                                      context: context,
+                                      info: 'prog.fh5am@gmail.com',
+                                      icon: Icon(
+                                        Icons.alternate_email,
+                                        color: Theme.of(context)
+                                            .primaryColor
+                                            .withOpacity(.6),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ]),
+                      ),
+                    ),
+                  ),
+                ),
+                // end of the column
               ],
             )
           ],
@@ -274,21 +357,59 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
     );
   }
 
+  Row contact(
+      {required BuildContext context,
+      required String info,
+      required Icon icon}) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        icon,
+        GestureDetector(
+          child: Row(
+            children: [
+              Text(info,
+                  style: GoogleFonts.balsamiqSans(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black45)),
+              IconButton(
+                onPressed: () {
+                  Clipboard.setData(ClipboardData(text: info));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text("Copied to Clipboard"),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.copy, color: Colors.grey),
+              )
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   Icon standardIcon({required String iconName}) {
     if (iconName == 'Room') {
-      return Icon(Icons.bedroom_parent_outlined,
-          size: 40, color: Colors.grey[850]);
+      return Icon(Icons.door_front_door_outlined,
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
     } else if (iconName == 'Area') {
-      return Icon(Icons.straighten_outlined, size: 40, color: Colors.grey[850]);
+      return Icon(Icons.straighten_outlined,
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
     } else if (iconName == 'Bathroom') {
-      return Icon(Icons.bathtub_outlined, size: 40, color: Colors.grey[850]);
+      return Icon(Icons.bathtub_outlined,
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
     } else if (iconName == 'Garage') {
-      return Icon(Icons.garage_outlined, size: 40, color: Colors.grey[850]);
+      return Icon(Icons.garage_outlined,
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
     } else if (iconName == 'Floor') {
-      return Icon(Icons.table_rows_outlined, size: 40, color: Colors.grey[850]);
+      return Icon(Icons.table_rows_outlined,
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
     } else {
       return Icon(Icons.bedroom_parent_outlined,
-          size: 40, color: Colors.grey[850]);
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
     }
   }
 
@@ -303,7 +424,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
       required Icon icon2,
       required Icon icon3}) {
     return Padding(
-        padding: const EdgeInsets.only(top: 10, bottom: 10),
+        padding: const EdgeInsets.only(top: 12, bottom: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
@@ -328,6 +449,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                             color: Colors.black45))
                   ],
                 ),
+                const SizedBox(width: 20)
               ],
             ),
             Row(
@@ -354,7 +476,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                     fontWeight: FontWeight.bold,
                                     fontSize: 12),
                               )
-                            : const SizedBox()
+                            : const SizedBox(),
                       ],
                     ),
                     Text(text2,
@@ -364,6 +486,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                             color: Colors.black45))
                   ],
                 ),
+                const SizedBox(width: 20)
               ],
             ),
             Row(

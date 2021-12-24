@@ -26,7 +26,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         toolbarHeight: 70,
         title: title == 'null'
             ? const StandardTextField(
-                hintText: 'Search for a home',
+                hintText: 'Find a home',
                 icon: Icon(Icons.search),
               )
             : Text(
@@ -45,9 +45,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
           else if (title == 'Details')
             IconButton(
                 onPressed: () {},
-                icon: const Icon(
+                icon: Icon(
                   Icons.bookmark_border,
                   size: 34,
+                  color: Theme.of(context).primaryColor,
                 ))
           else
             const SizedBox()
