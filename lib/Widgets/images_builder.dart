@@ -11,7 +11,7 @@ class ImagesBuilder extends StatelessWidget {
       child: SizedBox(
         height: 170.0,
         child: ListView.builder(
-            // physics: ClampingScrollPhysics(),
+            physics: const BouncingScrollPhysics(),
             // shrinkWrap: true,
             scrollDirection: Axis.horizontal,
             itemCount: list.length,
@@ -29,7 +29,9 @@ class ImagesBuilder extends StatelessWidget {
                       ),
                       child: list[index],
                     ),
-                    const SizedBox(),
+                    const SizedBox(
+                      width: 10,
+                    ),
                   ],
                 )),
       ),

@@ -13,10 +13,11 @@ class Categories {
   late final List<String> children;
 
   Categories.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    description = json['description'];
-    image = json['image'];
+    id = json['id'] ?? "N/A";
+    name = json['name'] ?? "Unknown";
+    description = json['description'] ?? "There is no description";
+    image = json['image'] ??
+        "https://4.bp.blogspot.com/-OCutvC4wPps/XfNnRz5PvhI/AAAAAAAAEfo/qJ8P1sqLWesMdOSiEoUH85s3hs_vn97HACLcBGAsYHQ/s1600/no-image-found-360x260.png";
     children = List.castFrom<dynamic, String>(json['children']);
   }
 

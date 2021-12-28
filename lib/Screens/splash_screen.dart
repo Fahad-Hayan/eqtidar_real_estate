@@ -31,7 +31,8 @@ class _MySplashScreenState extends State<MySplashScreen> {
     http.Response res = await http
         .get(Uri.parse('https://selfishmachine.pythonanywhere.com/api/unit'));
     if (res.statusCode == 200) {
-      debugPrint(res.body);
+      debugPrint('unit: ${res.body}');
+      debugPrint('unit: ${res.statusCode}');
       final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
       // return MyModel.fromJson(json.decode(res.body));
       return parsed.map<Unit>((item) => Unit.fromJson(item)).toList();
@@ -44,7 +45,8 @@ class _MySplashScreenState extends State<MySplashScreen> {
     http.Response res = await http.get(
         Uri.parse('https://selfishmachine.pythonanywhere.com/api/Categorys'));
     if (res.statusCode == 200) {
-      debugPrint(res.body);
+      debugPrint('category: ${res.body}');
+      debugPrint('category: ${res.statusCode}');
       final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
       // return MyModel.fromJson(json.decode(res.body));
       return parsed
@@ -60,7 +62,11 @@ class _MySplashScreenState extends State<MySplashScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: EasySplashScreen(
-        logo: Image.asset('assets/images/SplashScreenLogo.jpg'),
+        logo: Image.asset(
+          'assets/images/EqtidarResize.png',
+          // fit: BoxFit.cover,
+          // scale: .7,
+        ),
         logoSize: 150,
         navigator: Stack(alignment: Alignment.bottomCenter, children: const [
           MyMainScreen(),

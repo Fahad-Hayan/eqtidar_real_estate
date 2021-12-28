@@ -5,22 +5,38 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 List imgList = const [
-  'https://picsum.photos/seed/491/600',
-  'https://picsum.photos/seed/490/200',
-  'https://picsum.photos/seed/489/600',
-  'https://picsum.photos/seed/488/600',
+  'https://images.adsttc.com/media/images/5eb5/bb73/b357/65bd/2b00/0710/newsletter/Essam_Arafa_Title.jpg?1588968302',
+  'https://mir-s3-cdn-cf.behance.net/project_modules/fs/6825ad60635095.5a546f65065ae.jpg',
+  'http://prod-upp-image-read.ft.com/6e4a796a-c557-11e5-808f-8231cd71622e',
+  'https://thetreemag.com/wp-content/uploads/2020/07/06_ORA_Dum_v_Ruine_BoysPlayNice-scaled.jpg',
 ];
 
 class MyDetailsPage extends StatefulWidget {
-  const MyDetailsPage(
-      {required this.location,
-      required this.description,
-      required this.price,
-      Key? key})
-      : super(key: key);
+  const MyDetailsPage({
+    required this.location,
+    required this.description,
+    required this.price,
+    required this.email,
+    required this.phone,
+    required this.room,
+    required this.area,
+    required this.baths,
+    required this.garage,
+    required this.floor,
+    required this.beds,
+    Key? key,
+  }) : super(key: key);
   final String location;
   final int price;
   final String description;
+  final int phone;
+  final String email;
+  final int room;
+  final int area;
+  final int baths;
+  final int garage;
+  final int floor;
+  final int beds;
   @override
   State<MyDetailsPage> createState() => _MyDetailsPageState();
 }
@@ -132,41 +148,6 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
             ),
             Column(
               children: [
-                // Card(
-                //   elevation: 1,
-                //   shape: RoundedRectangleBorder(
-                //     borderRadius: BorderRadius.circular(20),
-                //   ),
-                //   child: Column(children: [
-                //     Container(
-                //       color: Theme.of(context).primaryColor,
-                //       height: 40,
-                //       // width: double.infinity,
-                //     ),
-                //     detailsContent(
-                //       count1: 10,
-                //       count2: 300,
-                //       count3: 2,
-                //       text1: 'Room',
-                //       text2: 'Area',
-                //       text3: 'Bathroom',
-                //       icon1: standardIcon(iconName: 'Room'),
-                //       icon2: standardIcon(iconName: 'Area'),
-                //       icon3: standardIcon(iconName: 'Bathroom'),
-                //     ),
-                //     detailsContent(
-                //       count1: 1,
-                //       count2: 2,
-                //       count3: 2,
-                //       text1: 'Garage',
-                //       text2: 'Floor',
-                //       text3: 'Bedroom',
-                //       icon1: standardIcon(iconName: 'Garage'),
-                //       icon2: standardIcon(iconName: 'Floor'),
-                //       icon3: standardIcon(iconName: 'Bedroom'),
-                //     ),
-                //   ]),
-                // ),
                 Padding(
                   padding:
                       const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
@@ -195,9 +176,9 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                               Column(
                                 children: [
                                   detailsContent(
-                                    count1: 10,
-                                    count2: 300,
-                                    count3: 2,
+                                    count1: widget.room,
+                                    count2: widget.area,
+                                    count3: widget.baths,
                                     text1: 'Room',
                                     text2: 'Area',
                                     text3: 'Bathroom',
@@ -206,9 +187,9 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                     icon3: standardIcon(iconName: 'Bathroom'),
                                   ),
                                   detailsContent(
-                                    count1: 1,
-                                    count2: 2,
-                                    count3: 2,
+                                    count1: widget.garage,
+                                    count2: widget.floor,
+                                    count3: widget.beds,
                                     text1: 'Garage',
                                     text2: 'Floor',
                                     text3: 'Bedroom',
@@ -258,28 +239,6 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                 color: Colors.black45),
                             textAlign: TextAlign.justify,
                           )
-                          // detailsContent(
-                          //   count1: 10,
-                          //   count2: 300,
-                          //   count3: 2,
-                          //   text1: 'Room',
-                          //   text2: 'Area',
-                          //   text3: 'Bathroom',
-                          //   icon1: standardIcon(iconName: 'Room'),
-                          //   icon2: standardIcon(iconName: 'Area'),
-                          //   icon3: standardIcon(iconName: 'Bathroom'),
-                          // ),
-                          // detailsContent(
-                          //   count1: 1,
-                          //   count2: 2,
-                          //   count3: 2,
-                          //   text1: 'Garage',
-                          //   text2: 'Floor',
-                          //   text3: 'Bedroom',
-                          //   icon1: standardIcon(iconName: 'Garage'),
-                          //   icon2: standardIcon(iconName: 'Floor'),
-                          //   icon3: standardIcon(iconName: 'Bedroom'),
-                          // ),
                         ]),
                       ),
                     ),
@@ -321,8 +280,9 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     contact(
+                                      id: 'phone',
                                       context: context,
-                                      info: '07731302963',
+                                      info: widget.phone.toString(),
                                       icon: Icon(
                                         Icons.phone,
                                         color: Theme.of(context)
@@ -334,8 +294,9 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                       height: 6,
                                     ),
                                     contact(
+                                      id: 'email',
                                       context: context,
-                                      info: 'prog.fh5am@gmail.com',
+                                      info: widget.email,
                                       icon: Icon(
                                         Icons.alternate_email,
                                         color: Theme.of(context)
@@ -363,7 +324,8 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
   Row contact(
       {required BuildContext context,
       required String info,
-      required Icon icon}) {
+      required Icon icon,
+      required String id}) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
@@ -371,7 +333,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
         GestureDetector(
           child: Row(
             children: [
-              Text(info,
+              Text(id == 'phone' ? '0$info' : info,
                   style: GoogleFonts.balsamiqSans(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

@@ -17,23 +17,6 @@ class MyCategoriesPage extends StatelessWidget {
       appBar: const MyAppBar(title: 'Categories'),
       body: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
-
-          // Positioned(
-          //   bottom: 0,
-          //   child: SizedBox(
-          //     width: MediaQuery.of(context).size.width,
-          //     height: MediaQuery.of(context).size.height,
-          //     child: Image.asset(
-          //       'assets/images/Categories background.jpg',
-          //       fit: BoxFit.cover,
-          //     ),
-          //   ),
-          // ),
-          // Container(
-          //   width: MediaQuery.of(context).size.width,
-          //   height: MediaQuery.of(context).size.height,
-          //   color: Colors.blueAccent.withOpacity(0.2),
-          // ),
           child: Center(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [

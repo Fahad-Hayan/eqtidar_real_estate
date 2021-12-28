@@ -23,12 +23,12 @@ class Unit {
   late final Merchant merchant;
 
   Unit.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    description = json['description'];
-    room = json['room'];
-    price = json['price'];
-    garden = json['garden'];
+    id = json['id'] ?? "N/A";
+    name = json['name'] ?? "Unknown";
+    description = json['description'] ?? "There is no description";
+    room = json['room'] ?? 0;
+    price = json['price'] ?? 0;
+    garden = json['garden'] ?? false;
     vendor = Vendor.fromJson(json['vendor']);
     category = Category.fromJson(json['category']);
     label = Label.fromJson(json['label']);

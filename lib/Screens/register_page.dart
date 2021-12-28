@@ -32,10 +32,15 @@ class _MySignUpScreenState extends State<MySignUpScreen> {
                 padding: const EdgeInsetsDirectional.fromSTEB(40, 0, 40, 0),
                 child: Column(
                   children: [
-                    const FlutterLogo(
-                      size: 150,
-                      textColor: Color.fromRGBO(0, 200, 255, 1),
-                      style: FlutterLogoStyle.stacked,
+                    // const FlutterLogo(
+                    //   size: 150,
+                    //   textColor: Color.fromRGBO(0, 200, 255, 1),
+                    //   style: FlutterLogoStyle.stacked,
+                    // ),
+                    Image.asset(
+                      'assets/images/EqtidarResize.png',
+                      fit: BoxFit.cover,
+                      scale: .7,
                     ),
                     const StandardTextField(
                       hintText: 'Full Name',

@@ -8,10 +8,33 @@ class StandardImageStyle extends StatelessWidget {
     required this.link,
     required this.price,
     required this.location,
+    required this.description,
+    required this.phone,
+    required this.email,
+    required this.room,
+    required this.area,
+    required this.baths,
+    required this.garage,
+    required this.floor,
+    required this.beds,
   }) : super(key: key);
   final String link;
   final String location;
   final int price;
+  final String description;
+  final int phone;
+  final String email;
+  final int room;
+
+  final int area;
+
+  final int baths;
+
+  final int garage;
+
+  final int beds;
+
+  final int floor;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +50,15 @@ class StandardImageStyle extends StatelessWidget {
               return MyDetailsPage(
                 location: location,
                 price: price,
-                description:
-                    'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
+                description: description,
+                phone: phone,
+                email: email,
+                area: area,
+                baths: baths,
+                beds: beds,
+                floor: floor,
+                garage: garage,
+                room: room,
               );
             },
           ),

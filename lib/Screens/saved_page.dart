@@ -11,7 +11,7 @@ class MySearchPage extends StatelessWidget {
       appBar: const MyAppBar(title: 'Saved'),
       body: Center(
           child: Text(
-        'You didn\'t save any prorerty yet',
+        'You didn\'t save anything yet',
         style: GoogleFonts.balsamiqSans(fontSize: 18, color: Colors.grey[700]),
       )),
     );
