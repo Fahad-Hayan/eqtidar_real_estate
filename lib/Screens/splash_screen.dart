@@ -17,45 +17,47 @@ class MySplashScreen extends StatefulWidget {
 }
 
 late Future<List<Unit>> unitRec;
-late Future<List<Categories>> categoriesRec;
+// late Future<List<Categories>> categoriesRec;
 
 class _MySplashScreenState extends State<MySplashScreen> {
   @override
   initState() {
     super.initState();
     unitRec = fetchUnit();
-    categoriesRec = fetchCategories();
+    // categoriesRec = fetchCategories();
   }
 
   Future<List<Unit>> fetchUnit() async {
     http.Response res = await http
         .get(Uri.parse('https://selfishmachine.pythonanywhere.com/api/unit'));
     if (res.statusCode == 200) {
-      debugPrint('unit: ${res.body}');
-      debugPrint('unit: ${res.statusCode}');
+      debugPrint('unitbody: ${res.body}');
+      debugPrint('unit statusCode: ${res.statusCode}');
       final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
       // return MyModel.fromJson(json.decode(res.body));
       return parsed.map<Unit>((item) => Unit.fromJson(item)).toList();
     } else {
-      throw Exception('can not load the data');
+      debugPrint('unit statusCode: ${res.statusCode}');
+      throw Exception('Error from server');
     }
   }
 
-  Future<List<Categories>> fetchCategories() async {
-    http.Response res = await http.get(
-        Uri.parse('https://selfishmachine.pythonanywhere.com/api/Categorys'));
-    if (res.statusCode == 200) {
-      debugPrint('category: ${res.body}');
-      debugPrint('category: ${res.statusCode}');
-      final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
-      // return MyModel.fromJson(json.decode(res.body));
-      return parsed
-          .map<Categories>((item) => Categories.fromJson(item))
-          .toList();
-    } else {
-      throw Exception('can not load the data');
-    }
-  }
+  // Future<List<Categories>> fetchCategories() async {
+  //   http.Response res = await http.get(
+  //       Uri.parse('https://selfishmachine.pythonanywhere.com/api/Categorys'));
+  //   if (res.statusCode == 200) {
+  //     debugPrint('categoryBody: ${res.body}');
+  //     debugPrint('categoryStatusCode: ${res.statusCode}');
+  //     final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
+  //     // return MyModel.fromJson(json.decode(res.body));
+  //     return parsed
+  //         .map<Categories>((item) => Categories.fromJson(item))
+  //         .toList();
+  //   } else {
+  //     debugPrint('categoryStatusCode: ${res.statusCode}');
+  //     throw Exception('can not load the data');
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {

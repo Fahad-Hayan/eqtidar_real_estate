@@ -10,7 +10,7 @@ class ApartmentsComplex extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://www.erbilrealestate.net/wp-content/uploads/2019/11/01-400x300.jpg',
-        price: 300000,
+        price: "300000",
         location: 'Baghdad, Alshaab',
         phone: 07731556738,
         email: 'AliAyad@gmail.com',
@@ -25,7 +25,7 @@ class ApartmentsComplex extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://i.pinimg.com/originals/12/30/61/1230618eec80a6f2ecf2fd43cd353010.jpg',
-        price: 240000,
+        price: "240000",
         location: 'Erbil',
         phone: 07731123556,
         email: 'KareemNori@gmail.com',
@@ -40,7 +40,7 @@ class ApartmentsComplex extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://www.erbilrealestate.net/wp-content/uploads/2019/09/01-1-400x300.jpg',
-        price: 500000,
+        price: "500000",
         location: 'Baghdad, Aldorah',
         phone: 07731397889,
         email: 'AhmedFathe',
@@ -55,7 +55,7 @@ class ApartmentsComplex extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://i0.wp.com/media-cdn.tripadvisor.com/media/vr-splice-j/06/64/61/dc.jpg',
-        price: 320000,
+        price: "320000",
         location: 'Baghdad, Alaadamiah',
         phone: 07714596729,
         email: 'FahadSarmed@gmail.com',

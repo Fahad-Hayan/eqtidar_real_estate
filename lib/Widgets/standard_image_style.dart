@@ -20,7 +20,7 @@ class StandardImageStyle extends StatelessWidget {
   }) : super(key: key);
   final String link;
   final String location;
-  final int price;
+  final String price;
   final String description;
   final int phone;
   final String email;
@@ -114,7 +114,7 @@ class StandardImageStyle extends StatelessWidget {
                           color:
                               Theme.of(context).primaryColor.withOpacity(.9)),
                       Text(
-                        '$price',
+                        price,
                         maxLines: 1,
                         style: GoogleFonts.balsamiqSans(
                             fontSize: 20,

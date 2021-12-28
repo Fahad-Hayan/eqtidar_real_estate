@@ -10,7 +10,7 @@ class PiecesOfLand extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://www.wired.com/wp-content/uploads/archive/news/images/full/1671_f.jpg',
-        price: 300000,
+        price: "300000",
         location: 'Baghdad, Alshaab',
         phone: 07731678729,
         email: 'MohammedAwad@gmail.com',
@@ -25,7 +25,7 @@ class PiecesOfLand extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://s.abcnews.com/images/US/HT_erbil_dream_house_5_jt_141104_16x9_992.jpg',
-        price: 240000,
+        price: "240000",
         location: 'Erbil',
         phone: 0773457843,
         email: 'FahadHayan@gmail.com',
@@ -40,7 +40,7 @@ class PiecesOfLand extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://www.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2011/09/20/Foreign/Images/IRAQHOUSING%20034A_1316545560.jpg?t=20170517',
-        price: 500000,
+        price: "500000",
         location: 'Baghdad, Aldorah',
         phone: 0776687843,
         email: 'KadimAhmed@gmail.com',
@@ -55,7 +55,7 @@ class PiecesOfLand extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://datafile4.arkadia.com/pictures/properties/w480h480/7-7086091-1526945589337041184.jpg',
-        price: 320000,
+        price: "320000",
         location: 'Baghdad, Alaadamiah',
         phone: 0773497733,
         email: 'OmarFaruk@gmail.com',

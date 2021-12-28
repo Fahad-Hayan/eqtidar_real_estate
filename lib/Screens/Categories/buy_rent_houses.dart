@@ -10,7 +10,7 @@ class BuyAndRentHouses extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://i.pinimg.com/originals/e5/e9/fc/e5e9fcb3d0435b2f2616989c0957412a.jpg',
-        price: 412000,
+        price: "412000",
         location: 'Erbil',
         phone: 07714830586,
         email: 'FatinArafat@gmail.com',
@@ -25,7 +25,7 @@ class BuyAndRentHouses extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://s3.amazonaws.com/images-aarz/uploads/properties/2018/4/20-marla-house-for-sale-in-dha-phase-7-karachi-for-rs-105-crore-160780-image-1-actual.jpg',
-        price: 523000,
+        price: "523000",
         location: 'Baghdad, Alshaab',
         phone: 0782957153,
         email: 'OmarSalem@gmail.com',
@@ -40,7 +40,7 @@ class BuyAndRentHouses extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://ap.rdcpix.com/c2ae66a7700cbf7bb28064df264aa134l-m3216475794od-w480_h360.jpg',
-        price: 342000,
+        price: "342000",
         location: 'Arbil',
         phone: 0781847540,
         email: 'Ahmedjumaa@gmail.com',
@@ -55,7 +55,7 @@ class BuyAndRentHouses extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://cdnb.artstation.com/p/assets/images/images/001/851/085/large/peshraw-rozh-008.jpg?1453727908',
-        price: 243000,
+        price: "243000",
         location: 'Baghdad, Hay Alaamel',
         phone: 07731485926,
         email: 'AliFathel@gmail.com',

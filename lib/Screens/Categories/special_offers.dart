@@ -10,7 +10,7 @@ class SpecialOffers extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://www.erbilrealestate.net/wp-content/uploads/2019/11/01-400x300.jpg',
-        price: 300000,
+        price: "300000",
         location: 'Baghdad, Alshaab',
         phone: 0773482824,
         email: 'AliFathel@gmail.com',
@@ -25,7 +25,7 @@ class SpecialOffers extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://i.pinimg.com/originals/12/30/61/1230618eec80a6f2ecf2fd43cd353010.jpg',
-        price: 240000,
+        price: "240000",
         location: 'Erbil',
         phone: 0779967834,
         email: 'HaidarSalem@gmail.com',
@@ -40,7 +40,7 @@ class SpecialOffers extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://www.erbilrealestate.net/wp-content/uploads/2019/09/01-1-400x300.jpg',
-        price: 500000,
+        price: "500000",
         location: 'Baghdad, Aldorah',
         phone: 0773586672,
         email: 'LaithSaad@gmail.com',
@@ -55,7 +55,7 @@ class SpecialOffers extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://i0.wp.com/media-cdn.tripadvisor.com/media/vr-splice-j/06/64/61/dc.jpg',
-        price: 320000,
+        price: "320000",
         location: 'Baghdad, Alaadamiah',
         phone: 077679733,
         email: 'HatemNaif@gmail.com',

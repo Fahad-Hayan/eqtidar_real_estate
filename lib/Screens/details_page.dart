@@ -27,7 +27,7 @@ class MyDetailsPage extends StatefulWidget {
     Key? key,
   }) : super(key: key);
   final String location;
-  final int price;
+  final String price;
   final String description;
   final int phone;
   final String email;
@@ -108,7 +108,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                           .primaryColor
                                           .withOpacity(.9)),
                                   Text(
-                                    '${widget.price}',
+                                    widget.price,
                                     style: GoogleFonts.balsamiqSans(
                                       fontSize: 30,
                                       color: Colors.black45,

@@ -10,7 +10,7 @@ class SailOffers extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://s.abcnews.com/images/US/HT_erbil_dream_house_1_jt_141104_16x9_1600.jpg',
-        price: 207000,
+        price: "207000",
         location: 'Baghdad, Karradah',
         phone: 0771244579,
         email: 'AbbasJameel@gmail.com',
@@ -25,7 +25,7 @@ class SailOffers extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://s.abcnews.com/images/US/HT_erbil_dream_house_5_jt_141104_16x9_992.jpg',
-        price: 600000,
+        price: "600000",
         location: 'Baghdad, Bab Alsharjee',
         phone: 07731357259,
         email: 'KarrarFaruk@gmail.com',
@@ -40,7 +40,7 @@ class SailOffers extends StatelessWidget {
       StandardImageStyle(
         link:
             'https://www.kuna.net.kw/NewsPictures/2018/1/21/e2334240-1a2b-4497-9598-572b828e48a1.jpg',
-        price: 410000,
+        price: "410000",
         location: 'Baghdad, Hay Aljameaah',
         phone: 07731396729,
         email: 'MohammedKareem@gmail.com',
@@ -54,7 +54,7 @@ class SailOffers extends StatelessWidget {
       ),
       StandardImageStyle(
         link: 'https://live.staticflickr.com/4001/4645209568_5a39a43fb6_b.jpg',
-        price: 320000,
+        price: "320000",
         location: 'Baghdad, Alkadimeah',
         phone: 0771950628,
         email: 'YasserAhmed@gmail.com',

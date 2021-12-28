@@ -27,7 +27,7 @@ class Unit {
     name = json['name'] ?? "Unknown";
     description = json['description'] ?? "There is no description";
     room = json['room'] ?? 0;
-    price = json['price'] ?? 0;
+    price = json['price'] ?? "0";
     garden = json['garden'] ?? false;
     vendor = Vendor.fromJson(json['vendor']);
     category = Category.fromJson(json['category']);
@@ -63,8 +63,9 @@ class Vendor {
 
   Vendor.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    name = json['name'];
-    image = json['image'];
+    name = json['name'] ?? "Unknown";
+    image = json['image'] ??
+        "https://4.bp.blogspot.com/-OCutvC4wPps/XfNnRz5PvhI/AAAAAAAAEfo/qJ8P1sqLWesMdOSiEoUH85s3hs_vn97HACLcBGAsYHQ/s1600/no-image-found-360x260.png";
   }
 
   Map<String, dynamic> toJson() {
@@ -92,9 +93,10 @@ class Category {
 
   Category.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    name = json['name'];
-    description = json['description'];
-    image = json['image'];
+    name = json['name'] ?? "Unknown";
+    description = json['description'] ?? "There is no description";
+    image = json['image'] ??
+        "https://4.bp.blogspot.com/-OCutvC4wPps/XfNnRz5PvhI/AAAAAAAAEfo/qJ8P1sqLWesMdOSiEoUH85s3hs_vn97HACLcBGAsYHQ/s1600/no-image-found-360x260.png";
     children = List.castFrom<dynamic, String>(json['children']);
   }
 
@@ -140,7 +142,7 @@ class Merchant {
 
   Merchant.fromJson(Map<String, dynamic> json) {
     id = json['id'];
-    name = json['name'];
+    name = json['name'] ?? "Unknown";
   }
 
   Map<String, dynamic> toJson() {

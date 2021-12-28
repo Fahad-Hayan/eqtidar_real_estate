@@ -24,7 +24,7 @@ List headline1 = const [
   StandardImageStyle(
     link:
         'https://www.erbilrealestate.net/wp-content/uploads/2019/11/01-400x300.jpg',
-    price: 300000,
+    price: "300000",
     location: 'Baghdad, Alshaab',
     phone: 07731556738,
     email: 'AliAyad@gmail.com',
@@ -39,7 +39,7 @@ List headline1 = const [
   StandardImageStyle(
     link:
         'https://i.pinimg.com/originals/12/30/61/1230618eec80a6f2ecf2fd43cd353010.jpg',
-    price: 240000,
+    price: "240000",
     location: 'Erbil',
     phone: 07731123556,
     email: 'KareemNori@gmail.com',
@@ -54,7 +54,7 @@ List headline1 = const [
   StandardImageStyle(
     link:
         'https://www.erbilrealestate.net/wp-content/uploads/2019/09/01-1-400x300.jpg',
-    price: 500000,
+    price: "500000",
     location: 'Baghdad, Aldorah',
     phone: 07731397889,
     email: 'AhmedFathe',
@@ -69,7 +69,7 @@ List headline1 = const [
   StandardImageStyle(
     link:
         'https://i0.wp.com/media-cdn.tripadvisor.com/media/vr-splice-j/06/64/61/dc.jpg',
-    price: 320000,
+    price: "320000",
     location: 'Baghdad, Alaadamiah',
     phone: 07714596729,
     email: 'FahadSarmed@gmail.com',
@@ -87,7 +87,7 @@ List headline2 = const [
   StandardImageStyle(
     link:
         'https://s.abcnews.com/images/US/HT_erbil_dream_house_1_jt_141104_16x9_1600.jpg',
-    price: 207000,
+    price: "207000",
     location: 'Baghdad, Karradah',
     phone: 0771244579,
     email: 'AbbasJameel@gmail.com',
@@ -102,7 +102,7 @@ List headline2 = const [
   StandardImageStyle(
     link:
         'https://s.abcnews.com/images/US/HT_erbil_dream_house_5_jt_141104_16x9_992.jpg',
-    price: 600000,
+    price: "600000",
     location: 'Baghdad, Bab Alsharjee',
     phone: 07731357259,
     email: 'KarrarFaruk@gmail.com',
@@ -117,7 +117,7 @@ List headline2 = const [
   StandardImageStyle(
     link:
         'https://www.kuna.net.kw/NewsPictures/2018/1/21/e2334240-1a2b-4497-9598-572b828e48a1.jpg',
-    price: 410000,
+    price: "410000",
     location: 'Baghdad, Hay Aljameaah',
     phone: 07731396729,
     email: 'MohammedKareem@gmail.com',
@@ -131,7 +131,7 @@ List headline2 = const [
   ),
   StandardImageStyle(
     link: 'https://live.staticflickr.com/4001/4645209568_5a39a43fb6_b.jpg',
-    price: 320000,
+    price: "320000",
     location: 'Baghdad, Alkadimeah',
     phone: 0771950628,
     email: 'YasserAhmed@gmail.com',
@@ -149,7 +149,7 @@ List headline3 = const [
   StandardImageStyle(
     link:
         'https://i.pinimg.com/originals/e5/e9/fc/e5e9fcb3d0435b2f2616989c0957412a.jpg',
-    price: 412000,
+    price: "412000",
     location: 'Erbil',
     phone: 07714830586,
     email: 'FatinArafat@gmail.com',
@@ -164,7 +164,7 @@ List headline3 = const [
   StandardImageStyle(
     link:
         'https://s3.amazonaws.com/images-aarz/uploads/properties/2018/4/20-marla-house-for-sale-in-dha-phase-7-karachi-for-rs-105-crore-160780-image-1-actual.jpg',
-    price: 523000,
+    price: "523000",
     location: 'Baghdad, Alshaab',
     phone: 0782957153,
     email: 'OmarSalem@gmail.com',
@@ -179,7 +179,7 @@ List headline3 = const [
   StandardImageStyle(
     link:
         'https://ap.rdcpix.com/c2ae66a7700cbf7bb28064df264aa134l-m3216475794od-w480_h360.jpg',
-    price: 342000,
+    price: "342000",
     location: 'Arbil',
     phone: 0781847540,
     email: 'Ahmedjumaa@gmail.com',
@@ -194,7 +194,7 @@ List headline3 = const [
   StandardImageStyle(
     link:
         'https://cdnb.artstation.com/p/assets/images/images/001/851/085/large/peshraw-rozh-008.jpg?1453727908',
-    price: 243000,
+    price: "243000",
     location: 'Baghdad, Hay Alaamel',
     phone: 07731485926,
     email: 'AliFathel@gmail.com',
@@ -303,53 +303,54 @@ class _MyHomePageState extends State<MyHomePage> {
               // return Text('${snapshot.data[1].category.}');
               return buildHomeBody(context);
             } else if (snapshot.hasError) {
-              return Text('${snapshot.error}');
-              // return SingleChildScrollView(
-              //   physics: const BouncingScrollPhysics(),
-              //   child: Column(
-              //     mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //     children: <Widget>[
-              //       SingleChildScrollView(
-              //         physics: const BouncingScrollPhysics(),
-              //         scrollDirection: Axis.horizontal,
-              //         child: Row(
-              //           children: [
-              //             const SizedBox(width: 20),
-              //             buldBanner(context, 'Apartments Complex',
-              //                 const ApartmentsComplex()),
-              //             buldBanner(
-              //                 context, 'Sail Offers', const SailOffers()),
-              //             buldBanner(context, 'Buy and Rent Houses',
-              //                 const BuyAndRentHouses()),
-              //             buldBanner(
-              //                 context, 'Pieces of Land', const PiecesOfLand()),
-              //             buldBanner(
-              //                 context, 'Special Offers', const SpecialOffers()),
-              //             buldBanner(context, 'Eqtidar for Service',
-              //                 const EqtiidarForConsulting()),
-              //             const SizedBox(width: 10),
-              //           ],
-              //         ),
-              //       ),
-              //       const SizedBox(height: 12),
-              //       const FLabel(
-              //         label: 'Appartments',
-              //       ),
-              //       ImagesBuilder(list: headline1),
-              //       const SizedBox(height: 20),
-              //       const FLabel(
-              //         label: 'Sale Offers',
-              //       ),
-              //       ImagesBuilder(list: headline2),
-              //       const SizedBox(height: 20),
-              //       const FLabel(
-              //         label: 'Houses',
-              //       ),
-              //       ImagesBuilder(list: headline3),
-              //       const SizedBox(height: 28),
-              //     ],
-              //   ),
-              // );
+              // return Text('${snapshot.error}');
+              return SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 20),
+                          buldBanner(context, 'Apartments Complex',
+                              const ApartmentsComplex()),
+                          buldBanner(
+                              context, 'Sail Offers', const SailOffers()),
+                          buldBanner(context, 'Buy and Rent Houses',
+                              const BuyAndRentHouses()),
+                          buldBanner(
+                              context, 'Pieces of Land', const PiecesOfLand()),
+                          buldBanner(
+                              context, 'Special Offers', const SpecialOffers()),
+                          buldBanner(context, 'Eqtidar for Service',
+                              const EqtiidarForConsulting()),
+                          const SizedBox(width: 10),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    const FLabel(
+                      label: 'Appartments',
+                    ),
+                    ImagesBuilder(list: headline1),
+                    const SizedBox(height: 20),
+                    const FLabel(
+                      label: 'Sale Offers',
+                    ),
+                    ImagesBuilder(list: headline2),
+                    const SizedBox(height: 20),
+                    const FLabel(
+                      label: 'Houses',
+                    ),
+                    ImagesBuilder(list: headline3),
+                    const SizedBox(height: 28),
+                    Text('${snapshot.error}'),
+                  ],
+                ),
+              );
             }
             return const Center(child: CircularProgressIndicator());
           }),
