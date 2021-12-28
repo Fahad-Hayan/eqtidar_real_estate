@@ -1,12 +1,17 @@
+import 'package:eqtidar_app/Screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class StandardTextField extends StatefulWidget {
-  const StandardTextField(
-      {Key? key, required this.hintText, required this.icon})
-      : super(key: key);
+  const StandardTextField({
+    Key? key,
+    required this.hintText,
+    required this.icon,
+    // required this.suficon,
+  }) : super(key: key);
   final String hintText;
   final Widget icon;
+  // final Widget suficon;
 
   @override
   State<StandardTextField> createState() => _StandardTextFieldState();
@@ -24,7 +29,21 @@ class _StandardTextFieldState extends State<StandardTextField> {
               passwoerdVisible = !passwoerdVisible;
             });
           });
-    } else {
+    }
+    // else if (hintText == 'null') {
+    //   return IconButton(
+    //       icon: const Icon(
+    //         Icons.filter_list,
+    //         color: Colors.black45,
+    //         size: 35,
+    //       ),
+    //       onPressed: () {
+    //         setState(() {
+    //           const MySplashScreen();
+    //         });
+    //       });
+    // }
+    else {
       return const SizedBox();
     }
   }

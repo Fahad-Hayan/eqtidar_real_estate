@@ -7,7 +7,7 @@ class EqtiidarForConsulting extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: const MyAppBar(title: 'Eqtiidar For Consulting'),
+        appBar: const MyAppBar(title: 'Eqtidar For Consulting'),
         body: Container());
   }
 }

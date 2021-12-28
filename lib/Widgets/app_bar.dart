@@ -1,3 +1,4 @@
+import 'package:eqtidar_app/Screens/splash_screen.dart';
 import 'package:eqtidar_app/Widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -36,9 +37,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         actions: [
           if (title == 'null')
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      builder: (context) => const MySplashScreen()));
+                },
                 icon: const Icon(
-                  Icons.filter_list,
+                  Icons.refresh,
                   color: Colors.black45,
                   size: 35,
                 ))

@@ -16,6 +16,7 @@ class MyCategoriesPage extends StatelessWidget {
     return Scaffold(
       appBar: const MyAppBar(title: 'Categories'),
       body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
 
           // Positioned(
           //   bottom: 0,
@@ -33,72 +34,71 @@ class MyCategoriesPage extends StatelessWidget {
           //   height: MediaQuery.of(context).size.height,
           //   color: Colors.blueAccent.withOpacity(0.2),
           // ),
-          child: SingleChildScrollView(
-        child: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Column(
-              children: [
-                StandardCategory(
-                  title: 'APARTMENTS COMPLEX',
-                  icon: Icon(
-                    Icons.apartment,
-                    size: 50,
-                    color: Theme.of(context).primaryColor,
-                  ),
-                  page: ApartmentsComplex(),
-                ),
-                StandardCategory(
-                  title: 'SAIL OFFERS',
-                  icon: SizedBox(
-                    child: Icon(
-                      Icons.sell,
+          child: Center(
+            child:
+                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+              Column(
+                children: [
+                  StandardCategory(
+                    title: 'APARTMENTS COMPLEX',
+                    icon: Icon(
+                      Icons.apartment,
                       size: 50,
                       color: Theme.of(context).primaryColor,
                     ),
+                    page: const ApartmentsComplex(),
                   ),
-                  page: const SailOffers(),
-                ),
-                StandardCategory(
-                  title: 'BUY AND RENT HOUSES',
-                  icon: Icon(
-                    Icons.house,
-                    size: 50,
-                    color: Theme.of(context).primaryColor,
+                  StandardCategory(
+                    title: 'SAIL OFFERS',
+                    icon: SizedBox(
+                      child: Icon(
+                        Icons.sell,
+                        size: 50,
+                        color: Theme.of(context).primaryColor,
+                      ),
+                    ),
+                    page: const SailOffers(),
                   ),
-                  page: const BuyAndRentHouses(),
-                ),
-                StandardCategory(
-                  title: 'PIECES OF LAND',
-                  icon: Icon(
-                    Icons.grass,
-                    size: 50,
-                    color: Theme.of(context).primaryColor,
+                  StandardCategory(
+                    title: 'BUY AND RENT HOUSES',
+                    icon: Icon(
+                      Icons.house,
+                      size: 50,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    page: const BuyAndRentHouses(),
                   ),
-                  page: const PiecesOfLand(),
-                ),
-                StandardCategory(
-                  title: 'SPECIAL OFFERS',
-                  icon: Icon(
-                    Icons.attach_money,
-                    size: 50,
-                    color: Theme.of(context).primaryColor,
+                  StandardCategory(
+                    title: 'PIECES OF LAND',
+                    icon: Icon(
+                      Icons.grass,
+                      size: 50,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    page: const PiecesOfLand(),
                   ),
-                  page: const SpecialOffers(),
-                ),
-                StandardCategory(
-                  title: 'EQTIDAR FOR CONSULTING',
-                  icon: Icon(
-                    Icons.support_agent,
-                    size: 50,
-                    color: Theme.of(context).primaryColor,
+                  StandardCategory(
+                    title: 'SPECIAL OFFERS',
+                    icon: Icon(
+                      Icons.attach_money,
+                      size: 50,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    page: const SpecialOffers(),
                   ),
-                  page: const EqtiidarForConsulting(),
-                ),
-              ],
-            ),
-          ]),
-        ),
-      )),
+                  StandardCategory(
+                    title: 'EQTIDAR FOR CONSULTING',
+                    icon: Icon(
+                      Icons.support_agent,
+                      size: 50,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    page: const EqtiidarForConsulting(),
+                  ),
+                ],
+              ),
+            ]),
+          )),
     );
   }
 }

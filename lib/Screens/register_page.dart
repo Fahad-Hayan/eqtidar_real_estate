@@ -23,6 +23,7 @@ class _MySignUpScreenState extends State<MySignUpScreen> {
       ),
       body: Center(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             // mainAxisAlignment: MainAxisAlignment.center,
@@ -37,14 +38,19 @@ class _MySignUpScreenState extends State<MySignUpScreen> {
                       style: FlutterLogoStyle.stacked,
                     ),
                     const StandardTextField(
-                        hintText: 'Full Name', icon: Icon(Icons.person)),
+                      hintText: 'Full Name',
+                      icon: Icon(Icons.person),
+                      // suficon: SizedBox(),
+                    ),
                     const StandardTextField(
                       hintText: 'Mobile Number',
                       icon: Icon(Icons.phone),
+                      // suficon: SizedBox(),
                     ),
                     const StandardTextField(
                       hintText: 'Password',
                       icon: Icon(Icons.password),
+                      // suficon: SizedBox(),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),

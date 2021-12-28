@@ -45,6 +45,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
       backgroundColor: Theme.of(context).canvasColor,
       appBar: const MyAppBar(title: 'Details'),
       body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Column(
           children: [
             Column(
@@ -187,6 +188,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                               color: Colors.black54),
                         ),
                         SingleChildScrollView(
+                          physics: const BouncingScrollPhysics(),
                           scrollDirection: Axis.horizontal,
                           child: Row(
                             children: [
@@ -311,6 +313,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                 height: 12,
                               ),
                               SingleChildScrollView(
+                                physics: const BouncingScrollPhysics(),
                                 scrollDirection: Axis.horizontal,
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,

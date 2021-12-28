@@ -1,4 +1,4 @@
-import 'package:eqtidar_app/Models/api/api_model.dart';
+import 'package:eqtidar_app/Models/api/unit.dart';
 import 'package:eqtidar_app/Screens/Categories/apartments_complex.dart';
 import 'package:eqtidar_app/Screens/Categories/buy_rent_houses.dart';
 import 'package:eqtidar_app/Screens/Categories/eqtidar_for_service.dart';
@@ -22,22 +22,26 @@ class MyHomePage extends StatefulWidget {
 
 List headline1 = const [
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/491/600',
+    link:
+        'https://www.erbilrealestate.net/wp-content/uploads/2019/11/01-400x300.jpg',
     price: 300000,
     location: 'Baghdad, Alshaab',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/490/200',
+    link:
+        'https://i.pinimg.com/originals/12/30/61/1230618eec80a6f2ecf2fd43cd353010.jpg',
     price: 240000,
-    location: 'Arbil',
+    location: 'Erbil',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/489/600',
+    link:
+        'https://www.erbilrealestate.net/wp-content/uploads/2019/09/01-1-400x300.jpg',
     price: 500000,
     location: 'Baghdad, Aldorah',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/488/600',
+    link:
+        'https://i0.wp.com/media-cdn.tripadvisor.com/media/vr-splice-j/06/64/61/dc.jpg',
     price: 320000,
     location: 'Baghdad, Alaadamiah',
   ),
@@ -45,22 +49,25 @@ List headline1 = const [
 ];
 List headline2 = const [
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/391/600',
+    link:
+        'https://s.abcnews.com/images/US/HT_erbil_dream_house_1_jt_141104_16x9_1600.jpg',
     price: 207000,
     location: 'Baghdad, Karradah',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/390/200',
+    link:
+        'https://s.abcnews.com/images/US/HT_erbil_dream_house_5_jt_141104_16x9_992.jpg',
     price: 600000,
     location: 'Baghdad, Bab Alsharjee',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/389/600',
+    link:
+        'https://www.kuna.net.kw/NewsPictures/2018/1/21/e2334240-1a2b-4497-9598-572b828e48a1.jpg',
     price: 410000,
     location: 'Baghdad, Hay Aljameaah',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/388/600',
+    link: 'https://live.staticflickr.com/4001/4645209568_5a39a43fb6_b.jpg',
     price: 320000,
     location: 'Baghdad, Alkadimeah',
   ),
@@ -68,22 +75,26 @@ List headline2 = const [
 ];
 List headline3 = const [
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/291/600',
+    link:
+        'https://i.pinimg.com/originals/e5/e9/fc/e5e9fcb3d0435b2f2616989c0957412a.jpg',
     price: 412000,
-    location: 'Arbil',
+    location: 'Erbil',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/290/200',
+    link:
+        'https://s3.amazonaws.com/images-aarz/uploads/properties/2018/4/20-marla-house-for-sale-in-dha-phase-7-karachi-for-rs-105-crore-160780-image-1-actual.jpg',
     price: 523000,
     location: 'Baghdad, Alshaab',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/289/600',
+    link:
+        'https://ap.rdcpix.com/c2ae66a7700cbf7bb28064df264aa134l-m3216475794od-w480_h360.jpg',
     price: 342000,
     location: 'Arbil',
   ),
   StandardImageStyle(
-    link: 'https://picsum.photos/seed/288/600',
+    link:
+        'https://cdnb.artstation.com/p/assets/images/images/001/851/085/large/peshraw-rozh-008.jpg?1453727908',
     price: 243000,
     location: 'Baghdad, Hay Alaamel',
   ),
@@ -124,57 +135,108 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: const MyAppBar(
         title: 'null',
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  const SizedBox(width: 20),
-                  buldBanner(
-                      context, 'Apartments Complex', const ApartmentsComplex()),
-                  buldBanner(context, 'Sail Offers', const SailOffers()),
-                  buldBanner(
-                      context, 'Buy and Rent Houses', const BuyAndRentHouses()),
-                  buldBanner(context, 'Pieces of Land', const PiecesOfLand()),
-                  buldBanner(context, 'Special Offers', const SpecialOffers()),
-                  buldBanner(context, 'Eqtidar for Service',
-                      const EqtiidarForConsulting()),
-                  const SizedBox(width: 10),
-                ],
-              ),
-            ),
-            const SizedBox(height: 12),
-            const Label(
-              label: 'Appartments',
-            ),
-            ImagesBuilder(list: headline1),
-            const SizedBox(height: 20),
-            const Label(
-              label: 'Sale Offers',
-            ),
-            ImagesBuilder(list: headline2),
-            const SizedBox(height: 20),
-            const Label(
-              label: 'Houses',
-            ),
-            ImagesBuilder(list: headline3),
-            const SizedBox(height: 28),
-            FutureBuilder<List<MyModel>>(
-                future: futureData,
-                builder: (BuildContext ctx, snapshot) {
-                  if (snapshot.hasData) {
-                    return Text('${snapshot.data![1].title}');
-                  } else if (snapshot.hasError) {
-                    return Text('${snapshot.error}');
-                  }
-                  return const CircularProgressIndicator();
-                })
-          ],
-        ),
-      ),
+      body: FutureBuilder<List<Unit>>(
+          future: unitRec,
+          builder: (BuildContext ctx, snapshot) {
+            if (snapshot.hasData) {
+              // return Text('${snapshot.data[1].}');
+              return SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 20),
+                          buldBanner(context, 'Apartments Complex',
+                              const ApartmentsComplex()),
+                          buldBanner(
+                              context, 'Sail Offers', const SailOffers()),
+                          buldBanner(context, 'Buy and Rent Houses',
+                              const BuyAndRentHouses()),
+                          buldBanner(
+                              context, 'Pieces of Land', const PiecesOfLand()),
+                          buldBanner(
+                              context, 'Special Offers', const SpecialOffers()),
+                          buldBanner(context, 'Eqtidar for Service',
+                              const EqtiidarForConsulting()),
+                          const SizedBox(width: 10),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    const FLabel(
+                      label: 'Appartments',
+                    ),
+                    ImagesBuilder(list: headline1),
+                    const SizedBox(height: 20),
+                    const FLabel(
+                      label: 'Sale Offers',
+                    ),
+                    ImagesBuilder(list: headline2),
+                    const SizedBox(height: 20),
+                    const FLabel(
+                      label: 'Houses',
+                    ),
+                    ImagesBuilder(list: headline3),
+                    const SizedBox(height: 28),
+                  ],
+                ),
+              );
+            } else if (snapshot.hasError) {
+              // return Text('${snapshot.error}');
+              return SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          const SizedBox(width: 20),
+                          buldBanner(context, 'Apartments Complex',
+                              const ApartmentsComplex()),
+                          buldBanner(
+                              context, 'Sail Offers', const SailOffers()),
+                          buldBanner(context, 'Buy and Rent Houses',
+                              const BuyAndRentHouses()),
+                          buldBanner(
+                              context, 'Pieces of Land', const PiecesOfLand()),
+                          buldBanner(
+                              context, 'Special Offers', const SpecialOffers()),
+                          buldBanner(context, 'Eqtidar for Service',
+                              const EqtiidarForConsulting()),
+                          const SizedBox(width: 10),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 12),
+                    const FLabel(
+                      label: 'Appartments',
+                    ),
+                    ImagesBuilder(list: headline1),
+                    const SizedBox(height: 20),
+                    const FLabel(
+                      label: 'Sale Offers',
+                    ),
+                    ImagesBuilder(list: headline2),
+                    const SizedBox(height: 20),
+                    const FLabel(
+                      label: 'Houses',
+                    ),
+                    ImagesBuilder(list: headline3),
+                    const SizedBox(height: 28),
+                  ],
+                ),
+              );
+            }
+            return const CircularProgressIndicator();
+          }),
     );
   }
 }

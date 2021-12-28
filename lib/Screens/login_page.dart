@@ -25,6 +25,7 @@ class _MyLoginPageState extends State<MyLoginPage> {
       appBar: const MyAppBar(title: 'Account'),
       body: Center(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -44,10 +45,12 @@ class _MyLoginPageState extends State<MyLoginPage> {
                     const StandardTextField(
                       hintText: 'Mobile number',
                       icon: Icon(Icons.phone),
+                      // suficon: SizedBox(),
                     ),
                     const StandardTextField(
                       hintText: 'Password',
                       icon: Icon(Icons.password),
+                      // suficon: SizedBox(),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),

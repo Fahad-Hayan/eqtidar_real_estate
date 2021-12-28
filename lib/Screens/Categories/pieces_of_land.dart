@@ -8,35 +8,39 @@ class PiecesOfLand extends StatelessWidget {
   Widget build(BuildContext context) {
     List list = const [
       StandardImageStyle(
-        link: 'https://picsum.photos/seed/491/600',
+        link:
+            'https://www.wired.com/wp-content/uploads/archive/news/images/full/1671_f.jpg',
         price: 300000,
         location: 'Baghdad, Alshaab',
       ),
       StandardImageStyle(
-        link: 'https://picsum.photos/seed/490/200',
+        link:
+            'https://s.abcnews.com/images/US/HT_erbil_dream_house_5_jt_141104_16x9_992.jpg',
         price: 240000,
-        location: 'Arbil',
+        location: 'Erbil',
       ),
       StandardImageStyle(
-        link: 'https://picsum.photos/seed/489/600',
+        link:
+            'https://www.washingtonpost.com/rf/image_1484w/2010-2019/WashingtonPost/2011/09/20/Foreign/Images/IRAQHOUSING%20034A_1316545560.jpg?t=20170517',
         price: 500000,
         location: 'Baghdad, Aldorah',
       ),
       StandardImageStyle(
-        link: 'https://picsum.photos/seed/488/600',
+        link:
+            'https://datafile4.arkadia.com/pictures/properties/w480h480/7-7086091-1526945589337041184.jpg',
         price: 320000,
         location: 'Baghdad, Alaadamiah',
       ),
       SizedBox(),
     ];
     return Scaffold(
-      appBar: const MyAppBar(title: 'Apartments Complex'),
+      appBar: const MyAppBar(title: 'Pieces of Lannds'),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 2),
         child: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: ListView.builder(
-              // physics: ClampingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               // shrinkWrap: true,
               itemCount: list.length,
               itemBuilder: (BuildContext context, int index) => Column(
