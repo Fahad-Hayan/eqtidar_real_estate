@@ -1,10 +1,5 @@
-import 'dart:math';
-import 'dart:ui';
-
 import 'package:eqtidar_app/Screens/register_page.dart';
 import 'package:eqtidar_app/Widgets/app_bar.dart';
-import 'package:eqtidar_app/Screens/main_screen.dart';
-import 'package:eqtidar_app/Widgets/floating_action_button.dart';
 import 'package:eqtidar_app/Widgets/text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

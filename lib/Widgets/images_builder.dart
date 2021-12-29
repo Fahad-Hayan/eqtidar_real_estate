@@ -1,4 +1,3 @@
-import 'package:eqtidar_app/Screens/details_page.dart';
 import 'package:flutter/material.dart';
 
 class ImagesBuilder extends StatelessWidget {

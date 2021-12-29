@@ -1,17 +1,17 @@
-import 'package:eqtidar_app/Models/api/unit.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 import 'package:eqtidar_app/Screens/Categories/apartments_complex.dart';
 import 'package:eqtidar_app/Screens/Categories/buy_rent_houses.dart';
 import 'package:eqtidar_app/Screens/Categories/eqtidar_for_service.dart';
 import 'package:eqtidar_app/Screens/Categories/pieces_of_land.dart';
 import 'package:eqtidar_app/Screens/Categories/sail_offer.dart';
 import 'package:eqtidar_app/Screens/Categories/special_offers.dart';
-import 'package:eqtidar_app/Screens/splash_screen.dart';
+
 import 'package:eqtidar_app/Widgets/app_bar.dart';
-import 'package:eqtidar_app/Widgets/standard_image_style.dart';
 import 'package:eqtidar_app/Widgets/images_builder.dart';
 import 'package:eqtidar_app/Widgets/label.dart';
-import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:eqtidar_app/Widgets/standard_image_style.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -236,58 +236,58 @@ Widget buldBanner(BuildContext ctx, String title, Widget page) {
   );
 }
 
-Widget buildHomeBody(BuildContext context) {
-  return SingleChildScrollView(
-    physics: const BouncingScrollPhysics(),
-    child: Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: [
-              const SizedBox(width: 20),
-              buldBanner(
-                  context, 'Apartments Complex', const ApartmentsComplex()),
-              buldBanner(context, 'Sail Offers', const SailOffers()),
-              buldBanner(
-                  context, 'Buy and Rent Houses', const BuyAndRentHouses()),
-              buldBanner(context, 'Pieces of Land', const PiecesOfLand()),
-              buldBanner(context, 'Special Offers', const SpecialOffers()),
-              buldBanner(context, 'Eqtidar for Service',
-                  const EqtiidarForConsulting()),
-              const SizedBox(width: 10),
-            ],
-          ),
-        ),
-        const SizedBox(height: 12),
-        const FLabel(
-          label: 'Appartments',
-        ),
-        ImagesBuilder(list: headline1),
-        const SizedBox(height: 20),
-        const FLabel(
-          label: 'Sale Offers',
-        ),
-        ImagesBuilder(list: headline2),
-        const SizedBox(height: 20),
-        const FLabel(
-          label: 'Houses',
-        ),
-        ImagesBuilder(list: headline3),
-        const SizedBox(height: 28),
-      ],
-    ),
-  );
-}
+// Widget buildHomeBody(BuildContext context) {
+//   return SingleChildScrollView(
+//     physics: const BouncingScrollPhysics(),
+//     child: Column(
+//       mainAxisAlignment: MainAxisAlignment.spaceAround,
+//       children: <Widget>[
+//         SingleChildScrollView(
+//           physics: const BouncingScrollPhysics(),
+//           scrollDirection: Axis.horizontal,
+//           child: Row(
+//             children: [
+//               const SizedBox(width: 20),
+//               buldBanner(
+//                   context, 'Apartments Complex', const ApartmentsComplex()),
+//               buldBanner(context, 'Sail Offers', const SailOffers()),
+//               buldBanner(
+//                   context, 'Buy and Rent Houses', const BuyAndRentHouses()),
+//               buldBanner(context, 'Pieces of Land', const PiecesOfLand()),
+//               buldBanner(context, 'Special Offers', const SpecialOffers()),
+//               buldBanner(context, 'Eqtidar for Service',
+//                   const EqtiidarForConsulting()),
+//               const SizedBox(width: 10),
+//             ],
+//           ),
+//         ),
+//         const SizedBox(height: 12),
+//         const FLabel(
+//           label: 'Appartments',
+//         ),
+//         ImagesBuilder(list: headline1),
+//         const SizedBox(height: 20),
+//         const FLabel(
+//           label: 'Sale Offers',
+//         ),
+//         ImagesBuilder(list: headline2),
+//         const SizedBox(height: 20),
+//         const FLabel(
+//           label: 'Houses',
+//         ),
+//         ImagesBuilder(list: headline3),
+//         const SizedBox(height: 28),
+//       ],
+//     ),
+//   );
+// }
 
-Widget buildUnitsList(List<Unit> unit) {
-  return ListView.builder(
-    itemCount: unit.length,
-    itemBuilder: (_ctx, index) => buildHomeBody(_ctx),
-  );
-}
+// Widget buildUnitsList(List<Unit> unit) {
+//   return ListView.builder(
+//     itemCount: unit.length,
+//     itemBuilder: (_ctx, index) => buildHomeBody(_ctx),
+//   );
+// }
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
@@ -296,64 +296,61 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: const MyAppBar(
         title: 'null',
       ),
-      body: FutureBuilder<List<Unit>>(
-          future: unitRec,
-          builder: (BuildContext ctx, AsyncSnapshot<List<Unit>> snapshot) {
-            if (snapshot.hasData) {
-              // return Text('${snapshot.data[1].category.}');
-              return buildHomeBody(context);
-            } else if (snapshot.hasError) {
-              // return Text('${snapshot.error}');
-              return SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-                    SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(),
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          const SizedBox(width: 20),
-                          buldBanner(context, 'Apartments Complex',
-                              const ApartmentsComplex()),
-                          buldBanner(
-                              context, 'Sail Offers', const SailOffers()),
-                          buldBanner(context, 'Buy and Rent Houses',
-                              const BuyAndRentHouses()),
-                          buldBanner(
-                              context, 'Pieces of Land', const PiecesOfLand()),
-                          buldBanner(
-                              context, 'Special Offers', const SpecialOffers()),
-                          buldBanner(context, 'Eqtidar for Service',
-                              const EqtiidarForConsulting()),
-                          const SizedBox(width: 10),
-                        ],
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    const FLabel(
-                      label: 'Appartments',
-                    ),
-                    ImagesBuilder(list: headline1),
-                    const SizedBox(height: 20),
-                    const FLabel(
-                      label: 'Sale Offers',
-                    ),
-                    ImagesBuilder(list: headline2),
-                    const SizedBox(height: 20),
-                    const FLabel(
-                      label: 'Houses',
-                    ),
-                    ImagesBuilder(list: headline3),
-                    const SizedBox(height: 28),
-                    Text('${snapshot.error}'),
-                  ],
-                ),
-              );
-            }
-            return const Center(child: CircularProgressIndicator());
-          }),
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            const SizedBox(height: 8),
+            SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const SizedBox(width: 20),
+                  buldBanner(
+                      context, 'Apartments Complex', const ApartmentsComplex()),
+                  buldBanner(context, 'Sail Offers', const SailOffers()),
+                  buldBanner(
+                      context, 'Buy and Rent Houses', const BuyAndRentHouses()),
+                  buldBanner(context, 'Pieces of Land', const PiecesOfLand()),
+                  buldBanner(context, 'Special Offers', const SpecialOffers()),
+                  buldBanner(context, 'Eqtidar for Service',
+                      const EqtiidarForConsulting()),
+                  const SizedBox(width: 10),
+                ],
+              ),
+            ),
+            const SizedBox(height: 12),
+            const FLabel(
+              label: 'Appartments',
+            ),
+            ImagesBuilder(list: headline1),
+            const SizedBox(height: 20),
+            const FLabel(
+              label: 'Sale Offers',
+            ),
+            ImagesBuilder(list: headline2),
+            const SizedBox(height: 20),
+            const FLabel(
+              label: 'Houses',
+            ),
+            ImagesBuilder(list: headline3),
+            const SizedBox(height: 28),
+          ],
+        ),
+      ),
+      // FutureBuilder<List<Unit>>(
+      //     future: unitRec,
+      //     builder: (BuildContext ctx, AsyncSnapshot<List<Unit>> snapshot) {
+      //       if (snapshot.hasData) {
+      //         // return Text('${snapshot.data[1].category.}');
+      //         return buildHomeBody(context);
+      //       } else if (snapshot.hasError) {
+      // return Text('${snapshot.error}');
+      //       }
+      //       return const Center(child: CircularProgressIndicator());
+      //     }),
     );
   }
 }

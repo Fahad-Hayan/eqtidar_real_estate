@@ -1,12 +1,8 @@
-import 'dart:convert';
-
 import 'package:easy_splash_screen/easy_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
+// import 'package:http/http.dart' as http;
 
-import 'package:eqtidar_app/Models/api/categories.dart';
-import 'package:eqtidar_app/Models/api/unit.dart';
 import 'package:eqtidar_app/Screens/main_screen.dart';
 
 class MySplashScreen extends StatefulWidget {
@@ -16,46 +12,28 @@ class MySplashScreen extends StatefulWidget {
   State<MySplashScreen> createState() => _MySplashScreenState();
 }
 
-late Future<List<Unit>> unitRec;
-// late Future<List<Categories>> categoriesRec;
+// late Future<List<Unit>> unitRec;
 
 class _MySplashScreenState extends State<MySplashScreen> {
-  @override
-  initState() {
-    super.initState();
-    unitRec = fetchUnit();
-    // categoriesRec = fetchCategories();
-  }
+  // @override
+  // initState() {
+  //   super.initState();
+  //   unitRec = fetchUnit();
 
-  Future<List<Unit>> fetchUnit() async {
-    http.Response res = await http
-        .get(Uri.parse('https://selfishmachine.pythonanywhere.com/api/unit'));
-    if (res.statusCode == 200) {
-      debugPrint('unitbody: ${res.body}');
-      debugPrint('unit statusCode: ${res.statusCode}');
-      final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
-      // return MyModel.fromJson(json.decode(res.body));
-      return parsed.map<Unit>((item) => Unit.fromJson(item)).toList();
-    } else {
-      debugPrint('unit statusCode: ${res.statusCode}');
-      throw Exception('Error from server');
-    }
-  }
+  // }
 
-  // Future<List<Categories>> fetchCategories() async {
-  //   http.Response res = await http.get(
-  //       Uri.parse('https://selfishmachine.pythonanywhere.com/api/Categorys'));
+  // Future<List<Unit>> fetchUnit() async {
+  //   http.Response res = await http
+  //       .get(Uri.parse('https://selfishmachine.pythonanywhere.com/api/unit'));
   //   if (res.statusCode == 200) {
-  //     debugPrint('categoryBody: ${res.body}');
-  //     debugPrint('categoryStatusCode: ${res.statusCode}');
+  //     debugPrint('unitbody: ${res.body}');
+  //     debugPrint('unit statusCode: ${res.statusCode}');
   //     final parsed = json.decode(res.body).cast<Map<String, dynamic>>();
   //     // return MyModel.fromJson(json.decode(res.body));
-  //     return parsed
-  //         .map<Categories>((item) => Categories.fromJson(item))
-  //         .toList();
+  //     return parsed.map<Unit>((item) => Unit.fromJson(item)).toList();
   //   } else {
-  //     debugPrint('categoryStatusCode: ${res.statusCode}');
-  //     throw Exception('can not load the data');
+  //     debugPrint('unit statusCode: ${res.statusCode}');
+  //     throw Exception('Error from server');
   //   }
   // }
 

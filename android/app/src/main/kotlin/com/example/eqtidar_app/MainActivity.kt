@@ -1,4 +1,4 @@
-package com.example.eqtidar_app
+package com.property.eqtidar
 
 import io.flutter.embedding.android.FlutterActivity
 
