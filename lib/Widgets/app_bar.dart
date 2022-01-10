@@ -24,11 +24,14 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         //     : const SizedBox(),
         centerTitle: true,
         foregroundColor: Colors.black45,
-        toolbarHeight: 70,
+        toolbarHeight: 90,
         title: title == 'null'
-            ? const StandardTextField(
-                hintText: 'Find a home',
-                icon: Icon(Icons.search),
+            ? const Padding(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: StandardTextField(
+                  hintText: 'Search',
+                  icon: Icon(Icons.search),
+                ),
               )
             : Text(
                 title,
@@ -37,14 +40,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
         actions: [
           if (title == 'null')
             IconButton(
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      builder: (context) => const MySplashScreen()));
-                },
+                onPressed: () {},
                 icon: const Icon(
-                  Icons.refresh,
+                  Icons.filter_list,
                   color: Colors.black45,
-                  size: 35,
+                  size: 26,
                 ))
           else if (title == 'Details')
             IconButton(

@@ -6,16 +6,16 @@ void main() {
 }
 
 Map<int, Color> color = const {
-  50: Color.fromRGBO(0, 200, 255, .1),
-  100: Color.fromRGBO(0, 200, 255, .2),
-  200: Color.fromRGBO(0, 200, 255, .3),
-  300: Color.fromRGBO(0, 200, 255, .4),
-  400: Color.fromRGBO(0, 200, 255, .5),
-  500: Color.fromRGBO(0, 200, 255, .6),
-  600: Color.fromRGBO(0, 200, 255, .7),
-  700: Color.fromRGBO(0, 200, 255, .8),
-  800: Color.fromRGBO(0, 200, 255, .9),
-  900: Color.fromRGBO(0, 200, 255, 1),
+  50: Color.fromRGBO(0, 49, 60, .1),
+  100: Color.fromRGBO(0, 49, 60, .2),
+  200: Color.fromRGBO(0, 49, 60, .3),
+  300: Color.fromRGBO(0, 49, 60, .4),
+  400: Color.fromRGBO(0, 49, 60, .5),
+  500: Color.fromRGBO(0, 49, 60, .6),
+  600: Color.fromRGBO(0, 49, 60, .7),
+  700: Color.fromRGBO(0, 49, 60, .8),
+  800: Color.fromRGBO(0, 49, 60, .9),
+  900: Color.fromRGBO(0, 49, 60, 1),
 
   // 900: Color.fromRGBO(179, 174, 34, 1),
 };
@@ -28,10 +28,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Eqtidar Demo',
       theme: ThemeData(
-        primarySwatch: MaterialColor(0xff00c8ff, color),
+        primarySwatch: MaterialColor(0xff00313c, color),
         canvasColor: Colors.grey[200],
         // primaryColor: const Color.fromRGBO(179, 174, 34, 1),
-        primaryColor: const Color.fromRGBO(0, 200, 255, 1),
+        primaryColor: const Color.fromRGBO(0, 49, 60, 1),
       ),
       // initialRoute: '/splashScreen',
       // routes: {

@@ -14,7 +14,8 @@ class ApartmentsComplex extends StatelessWidget {
         location: 'Baghdad, Alshaab',
         phone: 07731556738,
         email: 'AliAyad@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 200,
         baths: 1,
         beds: 1,
@@ -29,7 +30,8 @@ class ApartmentsComplex extends StatelessWidget {
         location: 'Erbil',
         phone: 07731123556,
         email: 'KareemNori@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 300,
         baths: 2,
         beds: 3,
@@ -44,7 +46,8 @@ class ApartmentsComplex extends StatelessWidget {
         location: 'Baghdad, Aldorah',
         phone: 07731397889,
         email: 'AhmedFathe',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 230,
         baths: 2,
         beds: 2,
@@ -59,7 +62,8 @@ class ApartmentsComplex extends StatelessWidget {
         location: 'Baghdad, Alaadamiah',
         phone: 07714596729,
         email: 'FahadSarmed@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 400,
         baths: 4,
         beds: 4,

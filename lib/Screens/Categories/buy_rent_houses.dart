@@ -14,7 +14,8 @@ class BuyAndRentHouses extends StatelessWidget {
         location: 'Erbil',
         phone: 07714830586,
         email: 'FatinArafat@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 350,
         baths: 3,
         beds: 2,
@@ -29,7 +30,8 @@ class BuyAndRentHouses extends StatelessWidget {
         location: 'Baghdad, Alshaab',
         phone: 0782957153,
         email: 'OmarSalem@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 250,
         baths: 2,
         beds: 1,
@@ -44,7 +46,8 @@ class BuyAndRentHouses extends StatelessWidget {
         location: 'Arbil',
         phone: 0781847540,
         email: 'Ahmedjumaa@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 320,
         baths: 2,
         beds: 2,
@@ -59,7 +62,8 @@ class BuyAndRentHouses extends StatelessWidget {
         location: 'Baghdad, Hay Alaamel',
         phone: 07731485926,
         email: 'AliFathel@gmail.com',
-        description: 'Lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 350,
         baths: 2,
         beds: 2,

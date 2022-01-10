@@ -51,7 +51,7 @@ class _StandardTextFieldState extends State<StandardTextField> {
   Widget build(BuildContext context) {
     return Card(
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
+          borderRadius: BorderRadius.circular(20),
         ),
         elevation: 1,
         child: Center(

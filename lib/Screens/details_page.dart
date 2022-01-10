@@ -287,7 +287,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                         Icons.phone,
                                         color: Theme.of(context)
                                             .primaryColor
-                                            .withOpacity(.6),
+                                            .withOpacity(.8),
                                       ),
                                     ),
                                     const SizedBox(
@@ -301,7 +301,7 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
                                         Icons.alternate_email,
                                         color: Theme.of(context)
                                             .primaryColor
-                                            .withOpacity(.6),
+                                            .withOpacity(.8),
                                       ),
                                     ),
                                   ],
@@ -321,60 +321,25 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
     );
   }
 
-  Row contact(
-      {required BuildContext context,
-      required String info,
-      required Icon icon,
-      required String id}) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        icon,
-        GestureDetector(
-          child: Row(
-            children: [
-              Text(id == 'phone' ? '0$info' : info,
-                  style: GoogleFonts.balsamiqSans(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black45)),
-              IconButton(
-                onPressed: () {
-                  Clipboard.setData(ClipboardData(text: info));
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      content: Text("Copied to Clipboard"),
-                    ),
-                  );
-                },
-                icon: const Icon(Icons.copy, color: Colors.grey),
-              )
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
   Icon standardIcon({required String iconName}) {
     if (iconName == 'Room') {
       return Icon(Icons.door_front_door_outlined,
-          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.8));
     } else if (iconName == 'Area') {
       return Icon(Icons.straighten_outlined,
-          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.8));
     } else if (iconName == 'Bathroom') {
       return Icon(Icons.bathtub_outlined,
-          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.8));
     } else if (iconName == 'Garage') {
       return Icon(Icons.garage_outlined,
-          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.8));
     } else if (iconName == 'Floor') {
       return Icon(Icons.table_rows_outlined,
-          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.8));
     } else {
       return Icon(Icons.bedroom_parent_outlined,
-          size: 40, color: Theme.of(context).primaryColor.withOpacity(.6));
+          size: 40, color: Theme.of(context).primaryColor.withOpacity(.8));
     }
   }
 
@@ -480,4 +445,39 @@ class _MyDetailsPageState extends State<MyDetailsPage> {
           ],
         ));
   }
+}
+
+Row contact(
+    {required BuildContext context,
+    required String info,
+    required Icon icon,
+    required String id}) {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    children: [
+      icon,
+      GestureDetector(
+        child: Row(
+          children: [
+            Text(id == 'phone' ? '0$info' : info,
+                style: GoogleFonts.balsamiqSans(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black45)),
+            IconButton(
+              onPressed: () {
+                Clipboard.setData(ClipboardData(text: info));
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text("Copied to Clipboard"),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.copy, color: Colors.grey),
+            )
+          ],
+        ),
+      ),
+    ],
+  );
 }

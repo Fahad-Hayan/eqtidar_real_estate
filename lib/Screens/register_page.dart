@@ -74,8 +74,8 @@ class _MySignUpScreenState extends State<MySignUpScreen> {
                           'Sign Up',
                           style: GoogleFonts.balsamiqSans(
                             fontSize: 16,
-                            color: Colors.black45,
-                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
                           ),
                           // TextStyle(
                           //     color: Colors.black45,

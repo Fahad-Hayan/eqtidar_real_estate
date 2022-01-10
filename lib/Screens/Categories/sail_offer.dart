@@ -14,7 +14,8 @@ class SailOffers extends StatelessWidget {
         location: 'Baghdad, Karradah',
         phone: 0771244579,
         email: 'AbbasJameel@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 300,
         baths: 2,
         beds: 2,
@@ -29,7 +30,8 @@ class SailOffers extends StatelessWidget {
         location: 'Baghdad, Bab Alsharjee',
         phone: 07731357259,
         email: 'KarrarFaruk@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 500,
         baths: 4,
         beds: 3,
@@ -44,7 +46,8 @@ class SailOffers extends StatelessWidget {
         location: 'Baghdad, Hay Aljameaah',
         phone: 07731396729,
         email: 'MohammedKareem@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 200,
         baths: 2,
         beds: 2,
@@ -58,7 +61,8 @@ class SailOffers extends StatelessWidget {
         location: 'Baghdad, Alkadimeah',
         phone: 0771950628,
         email: 'YasserAhmed@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 400,
         baths: 4,
         beds: 4,

@@ -14,7 +14,8 @@ class PiecesOfLand extends StatelessWidget {
         location: 'Baghdad, Alshaab',
         phone: 07731678729,
         email: 'MohammedAwad@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 400,
         baths: 0,
         beds: 0,
@@ -29,7 +30,8 @@ class PiecesOfLand extends StatelessWidget {
         location: 'Erbil',
         phone: 0773457843,
         email: 'FahadHayan@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 500,
         baths: 0,
         beds: 0,
@@ -44,7 +46,8 @@ class PiecesOfLand extends StatelessWidget {
         location: 'Baghdad, Aldorah',
         phone: 0776687843,
         email: 'KadimAhmed@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 300,
         baths: 0,
         beds: 0,
@@ -59,7 +62,8 @@ class PiecesOfLand extends StatelessWidget {
         location: 'Baghdad, Alaadamiah',
         phone: 0773497733,
         email: 'OmarFaruk@gmail.com',
-        description: 'lorem ipsum',
+        description:
+            'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
         area: 700,
         baths: 0,
         beds: 0,
@@ -70,7 +74,7 @@ class PiecesOfLand extends StatelessWidget {
       SizedBox(),
     ];
     return Scaffold(
-      appBar: const MyAppBar(title: 'Pieces of Lannds'),
+      appBar: const MyAppBar(title: 'Pieces of Lands'),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 2),
         child: SizedBox(

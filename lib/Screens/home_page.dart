@@ -28,7 +28,8 @@ List headline1 = const [
     location: 'Baghdad, Alshaab',
     phone: 07731556738,
     email: 'AliAyad@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 200,
     baths: 1,
     beds: 1,
@@ -43,7 +44,8 @@ List headline1 = const [
     location: 'Erbil',
     phone: 07731123556,
     email: 'KareemNori@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 300,
     baths: 2,
     beds: 3,
@@ -58,7 +60,8 @@ List headline1 = const [
     location: 'Baghdad, Aldorah',
     phone: 07731397889,
     email: 'AhmedFathe',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 230,
     baths: 2,
     beds: 2,
@@ -73,7 +76,8 @@ List headline1 = const [
     location: 'Baghdad, Alaadamiah',
     phone: 07714596729,
     email: 'FahadSarmed@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 400,
     baths: 4,
     beds: 4,
@@ -91,7 +95,8 @@ List headline2 = const [
     location: 'Baghdad, Karradah',
     phone: 0771244579,
     email: 'AbbasJameel@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 300,
     baths: 2,
     beds: 2,
@@ -106,7 +111,8 @@ List headline2 = const [
     location: 'Baghdad, Bab Alsharjee',
     phone: 07731357259,
     email: 'KarrarFaruk@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 500,
     baths: 4,
     beds: 3,
@@ -121,7 +127,8 @@ List headline2 = const [
     location: 'Baghdad, Hay Aljameaah',
     phone: 07731396729,
     email: 'MohammedKareem@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 200,
     baths: 2,
     beds: 2,
@@ -135,7 +142,8 @@ List headline2 = const [
     location: 'Baghdad, Alkadimeah',
     phone: 0771950628,
     email: 'YasserAhmed@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 400,
     baths: 4,
     beds: 4,
@@ -153,7 +161,8 @@ List headline3 = const [
     location: 'Erbil',
     phone: 07714830586,
     email: 'FatinArafat@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 350,
     baths: 3,
     beds: 2,
@@ -168,7 +177,8 @@ List headline3 = const [
     location: 'Baghdad, Alshaab',
     phone: 0782957153,
     email: 'OmarSalem@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 250,
     baths: 2,
     beds: 1,
@@ -183,7 +193,8 @@ List headline3 = const [
     location: 'Arbil',
     phone: 0781847540,
     email: 'Ahmedjumaa@gmail.com',
-    description: 'lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 320,
     baths: 2,
     beds: 2,
@@ -198,7 +209,8 @@ List headline3 = const [
     location: 'Baghdad, Hay Alaamel',
     phone: 07731485926,
     email: 'AliFathel@gmail.com',
-    description: 'Lorem ipsum',
+    description:
+        'This stunning two-story home is on a large lot in a hot neighborhood. From the open-concept kitchen and living space to the large shaded backyard, there is plenty of room for the whole family to enjoy. Recent updates include new carpeting upstairs and stainless appliances. Situated in a family-friendly neighborhood near a great park, this home is sure to go fast!',
     area: 350,
     baths: 2,
     beds: 2,
@@ -229,8 +241,8 @@ Widget buldBanner(BuildContext ctx, String title, Widget page) {
       child: Text(title,
           style: GoogleFonts.balsamiqSans(
             fontSize: 16,
-            color: Colors.black45,
-            fontWeight: FontWeight.bold,
+            color: Colors.white,
+            fontWeight: FontWeight.w400,
           )),
     ),
   );

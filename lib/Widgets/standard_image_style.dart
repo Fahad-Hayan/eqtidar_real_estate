@@ -77,9 +77,9 @@ class StandardImageStyle extends StatelessWidget {
         Positioned(
           bottom: 0,
           child: Container(
-            decoration: const BoxDecoration(
-              color: Colors.black45,
-              borderRadius: BorderRadius.vertical(
+            decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor.withOpacity(.4),
+              borderRadius: const BorderRadius.vertical(
                 bottom: (Radius.circular(20)),
               ),
             ),
@@ -93,10 +93,8 @@ class StandardImageStyle extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(Icons.location_pin,
-                          size: 20,
-                          color:
-                              Theme.of(context).primaryColor.withOpacity(.9)),
+                      const Icon(Icons.location_pin,
+                          size: 20, color: Colors.white),
                       Text(
                         location,
                         textWidthBasis: TextWidthBasis.parent,
@@ -109,10 +107,8 @@ class StandardImageStyle extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(Icons.attach_money,
-                          size: 22,
-                          color:
-                              Theme.of(context).primaryColor.withOpacity(.9)),
+                      const Icon(Icons.attach_money,
+                          size: 22, color: Colors.white),
                       Text(
                         price,
                         maxLines: 1,

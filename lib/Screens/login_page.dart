@@ -76,9 +76,9 @@ class _MyLoginPageState extends State<MyLoginPage> {
                         },
                         child: Text('Login',
                             style: GoogleFonts.balsamiqSans(
-                                color: Colors.black45,
+                                color: Colors.white,
                                 fontSize: 16,
-                                fontWeight: FontWeight.bold)
+                                fontWeight: FontWeight.w400)
                             // TextStyle(
                             //     color: Colors.black45,
                             //     fontSize: 16,
